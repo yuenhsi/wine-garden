@@ -1,0 +1,6 @@
+framework module Pods_Wine_Garden {
+  umbrella header "Pods-Wine Garden-umbrella.h"
+
+  export *
+  module * { export * }
+}

@@ -8,20 +8,24 @@
 
 /* Begin PBXBuildFile section */
 		5AB6FE901E294A8D00BBD32F /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5AB6FE8F1E294A8D00BBD32F /* AppDelegate.swift */; };
-		5AB6FE921E294A8D00BBD32F /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5AB6FE911E294A8D00BBD32F /* ViewController.swift */; };
+		5AB6FE921E294A8D00BBD32F /* MainVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5AB6FE911E294A8D00BBD32F /* MainVC.swift */; };
 		5AB6FE951E294A8D00BBD32F /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5AB6FE931E294A8D00BBD32F /* Main.storyboard */; };
 		5AB6FE971E294A8D00BBD32F /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 5AB6FE961E294A8D00BBD32F /* Assets.xcassets */; };
 		5AB6FE9A1E294A8D00BBD32F /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5AB6FE981E294A8D00BBD32F /* LaunchScreen.storyboard */; };
+		F53F715E7659065646E9A0BA /* Pods_Wine_Garden.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E7162C024F1592F000EF8322 /* Pods_Wine_Garden.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		5AB6FE8C1E294A8D00BBD32F /* Wine Garden.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Wine Garden.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		5AB6FE8F1E294A8D00BBD32F /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		5AB6FE911E294A8D00BBD32F /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		5AB6FE911E294A8D00BBD32F /* MainVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainVC.swift; sourceTree = "<group>"; };
 		5AB6FE941E294A8D00BBD32F /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		5AB6FE961E294A8D00BBD32F /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		5AB6FE991E294A8D00BBD32F /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		5AB6FE9B1E294A8D00BBD32F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		D1F2B4EFC5D712F8643DBA0C /* Pods-Wine Garden.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Wine Garden.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Wine Garden/Pods-Wine Garden.debug.xcconfig"; sourceTree = "<group>"; };
+		DD415E96B7645D68B31C361A /* Pods-Wine Garden.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Wine Garden.release.xcconfig"; path = "Pods/Target Support Files/Pods-Wine Garden/Pods-Wine Garden.release.xcconfig"; sourceTree = "<group>"; };
+		E7162C024F1592F000EF8322 /* Pods_Wine_Garden.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Wine_Garden.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -29,6 +33,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F53F715E7659065646E9A0BA /* Pods_Wine_Garden.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -40,6 +45,8 @@
 			children = (
 				5AB6FE8E1E294A8D00BBD32F /* Wine Garden */,
 				5AB6FE8D1E294A8D00BBD32F /* Products */,
+				E14400044D4A432E6A14457F /* Pods */,
+				67D313AC17E056138FAC2E1F /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -54,14 +61,63 @@
 		5AB6FE8E1E294A8D00BBD32F /* Wine Garden */ = {
 			isa = PBXGroup;
 			children = (
-				5AB6FE8F1E294A8D00BBD32F /* AppDelegate.swift */,
-				5AB6FE911E294A8D00BBD32F /* ViewController.swift */,
-				5AB6FE931E294A8D00BBD32F /* Main.storyboard */,
-				5AB6FE961E294A8D00BBD32F /* Assets.xcassets */,
-				5AB6FE981E294A8D00BBD32F /* LaunchScreen.storyboard */,
-				5AB6FE9B1E294A8D00BBD32F /* Info.plist */,
+				5AB6FEA31E294B1600BBD32F /* Model */,
+				5AB6FEA21E294B1200BBD32F /* View */,
+				5AB6FEA11E294B0600BBD32F /* Controller */,
+				5AB6FEA41E294B9000BBD32F /* Resources */,
 			);
 			path = "Wine Garden";
+			sourceTree = "<group>";
+		};
+		5AB6FEA11E294B0600BBD32F /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				5AB6FE8F1E294A8D00BBD32F /* AppDelegate.swift */,
+				5AB6FE911E294A8D00BBD32F /* MainVC.swift */,
+			);
+			name = Controller;
+			sourceTree = "<group>";
+		};
+		5AB6FEA21E294B1200BBD32F /* View */ = {
+			isa = PBXGroup;
+			children = (
+				5AB6FE931E294A8D00BBD32F /* Main.storyboard */,
+				5AB6FE981E294A8D00BBD32F /* LaunchScreen.storyboard */,
+			);
+			name = View;
+			sourceTree = "<group>";
+		};
+		5AB6FEA31E294B1600BBD32F /* Model */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Model;
+			sourceTree = "<group>";
+		};
+		5AB6FEA41E294B9000BBD32F /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				5AB6FE961E294A8D00BBD32F /* Assets.xcassets */,
+				5AB6FE9B1E294A8D00BBD32F /* Info.plist */,
+			);
+			name = Resources;
+			sourceTree = "<group>";
+		};
+		67D313AC17E056138FAC2E1F /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				E7162C024F1592F000EF8322 /* Pods_Wine_Garden.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		E14400044D4A432E6A14457F /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				D1F2B4EFC5D712F8643DBA0C /* Pods-Wine Garden.debug.xcconfig */,
+				DD415E96B7645D68B31C361A /* Pods-Wine Garden.release.xcconfig */,
+			);
+			name = Pods;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -71,9 +127,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 5AB6FE9E1E294A8D00BBD32F /* Build configuration list for PBXNativeTarget "Wine Garden" */;
 			buildPhases = (
+				8E88099A7C6B5A31174249B3 /* [CP] Check Pods Manifest.lock */,
 				5AB6FE881E294A8D00BBD32F /* Sources */,
 				5AB6FE891E294A8D00BBD32F /* Frameworks */,
 				5AB6FE8A1E294A8D00BBD32F /* Resources */,
+				229978591DA2241F5F387AB1 /* [CP] Embed Pods Frameworks */,
+				7191FF3FBE1DF144AFF2E91E /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -96,8 +155,7 @@
 				TargetAttributes = {
 					5AB6FE8B1E294A8D00BBD32F = {
 						CreatedOnToolsVersion = 8.2.1;
-						DevelopmentTeam = Y967H2EAMT;
-						ProvisioningStyle = Automatic;
+						ProvisioningStyle = Manual;
 					};
 				};
 			};
@@ -132,12 +190,60 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		229978591DA2241F5F387AB1 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Wine Garden/Pods-Wine Garden-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		7191FF3FBE1DF144AFF2E91E /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Wine Garden/Pods-Wine Garden-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		8E88099A7C6B5A31174249B3 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		5AB6FE881E294A8D00BBD32F /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				5AB6FE921E294A8D00BBD32F /* ViewController.swift in Sources */,
+				5AB6FE921E294A8D00BBD32F /* MainVC.swift in Sources */,
 				5AB6FE901E294A8D00BBD32F /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -259,9 +365,10 @@
 		};
 		5AB6FE9F1E294A8D00BBD32F /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = D1F2B4EFC5D712F8643DBA0C /* Pods-Wine Garden.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				DEVELOPMENT_TEAM = Y967H2EAMT;
+				DEVELOPMENT_TEAM = "";
 				INFOPLIST_FILE = "Wine Garden/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "ios.wine.Wine-Garden";
@@ -272,9 +379,10 @@
 		};
 		5AB6FEA01E294A8D00BBD32F /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = DD415E96B7645D68B31C361A /* Pods-Wine Garden.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				DEVELOPMENT_TEAM = Y967H2EAMT;
+				DEVELOPMENT_TEAM = "";
 				INFOPLIST_FILE = "Wine Garden/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "ios.wine.Wine-Garden";

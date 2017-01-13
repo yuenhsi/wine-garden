@@ -1,5 +1,5 @@
 //
-//  ViewController.swift
+//  MainVC.swift
 //  Wine Garden
 //
 //  Created by Yuen Hsi Chang on 1/13/17.
@@ -8,7 +8,7 @@
 
 import UIKit
 
-class ViewController: UIViewController {
+class MainVC: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
