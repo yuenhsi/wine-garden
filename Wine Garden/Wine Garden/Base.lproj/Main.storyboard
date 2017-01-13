@@ -128,6 +128,14 @@
                                             </constraints>
                                         </tableViewCellContentView>
                                         <color key="backgroundColor" red="0.90827156350000005" green="1" blue="0.94882909419999995" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                        <connections>
+                                            <outlet property="nameLbl" destination="0Wa-nb-iUj" id="hhx-7M-gAl"/>
+                                            <outlet property="regionLbl" destination="E6Y-M3-edD" id="1hA-z0-qzu"/>
+                                            <outlet property="thumbImg" destination="u36-9D-Klh" id="dEJ-Vf-oca"/>
+                                            <outlet property="typeLbl" destination="GiT-AR-4Iy" id="zvR-Ez-IDY"/>
+                                            <outlet property="varietalLbl" destination="reV-kc-jiY" id="9yd-tM-prj"/>
+                                            <outlet property="yearLbl" destination="xuR-Td-fG5" id="iYs-Ld-Vwe"/>
+                                        </connections>
                                     </tableViewCell>
                                 </prototypes>
                             </tableView>
