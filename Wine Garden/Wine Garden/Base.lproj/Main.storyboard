@@ -127,7 +127,7 @@
                                                 <constraint firstItem="SAA-ib-C4c" firstAttribute="trailing" secondItem="4hq-53-vZQ" secondAttribute="trailingMargin" id="Yvc-IQ-ld2"/>
                                             </constraints>
                                         </tableViewCellContentView>
-                                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                        <color key="backgroundColor" red="0.90827156350000005" green="1" blue="0.94882909419999995" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                     </tableViewCell>
                                 </prototypes>
                             </tableView>
