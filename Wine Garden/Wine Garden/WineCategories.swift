@@ -6,30 +6,41 @@
 //  Copyright © 2017 Yuen Hsi Chang. All rights reserved.
 //
 
-class WineType {
-    
+enum WineType: String {
+    case red = "Red Wine"
+    case white = "White Wine"
+    case bubbly = "Champagne & Sparkling"
+    case rosé = "Rosé Wine"
+    case dessert = "Dessert, Sherry & Port"
+    case saké = "Saké"
 }
 
-class WineVarietal {
-    
+enum WineVarietal: String {
+    case good = "Good"
+    case bad = "Bad"
 }
 
-class WineStyle {
-    
+enum WineStyle: String {
+    case good = "Good"
+    case bad = "Bad"
 }
 
-class WineRegion {
-    
+enum WineRegion: String {
+    case good = "Good"
+    case bad = "Bad"
 }
 
-class WineVintage {
-    
+enum WineVintage: String {
+    case good = "Good"
+    case bad = "Bad"
 }
 
-class WineAttributes {
-    
+enum WineAttributes: String {
+    case good = "Good"
+    case bad = "Bad"
 }
 
-class WineAppelation {
-    
+enum WineAppelation: String {
+    case good = "Good"
+    case bad = "Bad"
 }

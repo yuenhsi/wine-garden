@@ -7,19 +7,48 @@
 //
 
 import UIKit
+import Alamofire
 
-class MainVC: UIViewController {
+class MainVC: UIViewController, UITableViewDelegate, UITableViewDataSource {
 
+    @IBOutlet weak var tableView: UITableView!
+    
+    var regions: [WineRegion]!
+    var type: [WineType]!
+    var varietals: [WineVarietal]!
+    var tastes: [WineStyle]!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view, typically from a nib.
+        // populate regions / types / varietals / tastes
+        
+        tableView.dataSource = self
+        tableView.delegate = self
+        
+        setup {
+            self.updateUI()
+        }
     }
 
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
+    //populate wine lists
+    func setup(completed: @escaping DownloadComplete) {
+        Alamofire.request(categoryUrl).responseJSON { response in
+            if let JSON = response.result.value as? Dictionary<String, Any> {
+                print(JSON)
+            }
+        }
     }
-
-
+    
+    func updateUI() {
+        
+    }
+    
+    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        return 10
+    }
+    
+    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        return UITableViewCell()
+    }
 }
 
