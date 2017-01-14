@@ -14,7 +14,7 @@ class MainVC: UIViewController, UITableViewDelegate, UITableViewDataSource {
     @IBOutlet weak var tableView: UITableView!
     
     var regions: [WineRegion]!
-    var type: [WineType]!
+    var type: Dictionary<String, Int> = [:]
     var varietals: [WineVarietal]!
     var tastes: [WineStyle]!
     
@@ -26,6 +26,7 @@ class MainVC: UIViewController, UITableViewDelegate, UITableViewDataSource {
         tableView.delegate = self
         
         setup {
+            print(self.type)
             self.updateUI()
         }
     }
@@ -34,17 +35,33 @@ class MainVC: UIViewController, UITableViewDelegate, UITableViewDataSource {
     func setup(completed: @escaping DownloadComplete) {
         Alamofire.request(categoryUrl).responseJSON { response in
             if let JSON = response.result.value as? Dictionary<String, Any> {
-                print(JSON)
+                if let categories = JSON["Categories"] as? [Dictionary<String, Any>] {
+                    for category in categories {
+                        if let name = category["Name"] as? String {
+                            switch name {
+                            case "Wine Type":
+                                if let refinements = category["Refinements"] as? [Dictionary<String, Any>] {
+                                    for refinement in refinements {
+                                        if let key = refinement["Name"] as? String {
+                                            if let value = refinement["Id"] as? Int {
+                                                self.type[key] = value
+                                            }
+                                        }
+                                    }
+                                }
+                            default:
+                                break
+                            }
+                        }
+                    }
+                }
             }
+            completed()
         }
     }
     
     func updateUI() {
-        
-    }
-    
-    func numberOfSections(in tableView: UITableView) -> Int {
-        return 1
+        tableView.reloadData()
     }
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
@@ -52,7 +69,8 @@ class MainVC: UIViewController, UITableViewDelegate, UITableViewDataSource {
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        return WineCell()
+        return UITableViewCell()
     }
 }
+
 
