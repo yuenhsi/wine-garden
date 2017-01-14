@@ -13,10 +13,10 @@ class MainVC: UIViewController, UITableViewDelegate, UITableViewDataSource {
 
     @IBOutlet weak var tableView: UITableView!
     
-    var regions: [WineRegion]!
-    var type: Dictionary<String, Int> = [:]
-    var varietals: [WineVarietal]!
-    var tastes: [WineStyle]!
+    var types: Dictionary<String, Int> = [:]
+    var varietals: Dictionary<String, Int> = [:]
+    var tastes: Dictionary<String, Int> = [:]
+    var regions: Dictionary<String, Int> = [:]
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -26,7 +26,6 @@ class MainVC: UIViewController, UITableViewDelegate, UITableViewDataSource {
         tableView.delegate = self
         
         setup {
-            print(self.type)
             self.updateUI()
         }
     }
@@ -44,7 +43,37 @@ class MainVC: UIViewController, UITableViewDelegate, UITableViewDataSource {
                                     for refinement in refinements {
                                         if let key = refinement["Name"] as? String {
                                             if let value = refinement["Id"] as? Int {
-                                                self.type[key] = value
+                                                self.types[key] = value
+                                            }
+                                        }
+                                    }
+                                }
+                            case "Varietal":
+                                if let refinements = category["Refinements"] as? [Dictionary<String, Any>] {
+                                    for refinement in refinements {
+                                        if let key = refinement["Name"] as? String {
+                                            if let value = refinement["Id"] as? Int {
+                                                self.varietals[key] = value
+                                            }
+                                        }
+                                    }
+                                }
+                            case "Wine Style":
+                                if let refinements = category["Refinements"] as? [Dictionary<String, Any>] {
+                                    for refinement in refinements {
+                                        if let key = refinement["Name"] as? String {
+                                            if let value = refinement["Id"] as? Int {
+                                                self.tastes[key] = value
+                                            }
+                                        }
+                                    }
+                                }
+                            case "Region":
+                                if let refinements = category["Refinements"] as? [Dictionary<String, Any>] {
+                                    for refinement in refinements {
+                                        if let key = refinement["Name"] as? String {
+                                            if let value = refinement["Id"] as? Int {
+                                                self.regions[key] = value
                                             }
                                         }
                                     }
@@ -61,6 +90,10 @@ class MainVC: UIViewController, UITableViewDelegate, UITableViewDataSource {
     }
     
     func updateUI() {
+        print(self.types)
+        print(self.varietals)
+        print(self.tastes)
+        print(self.regions)
         tableView.reloadData()
     }
     
