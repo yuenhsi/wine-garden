@@ -9,28 +9,28 @@
 import UIKit
 import Alamofire
 
-class MainVC: UIViewController, UITableViewDelegate, UITableViewDataSource {
-
-    @IBOutlet weak var tableView: UITableView!
+class MainVC: UIViewController {
     
     var types: Dictionary<String, Int> = [:]
     var varietals: Dictionary<String, Int> = [:]
     var tastes: Dictionary<String, Int> = [:]
     var regions: Dictionary<String, Int> = [:]
     
+    
+    @IBOutlet weak var typeFilterBtn: UIButton!
+    @IBOutlet weak var varietalFilterBtn: UIButton!
+    @IBOutlet weak var tasteFilterBtn: UIButton!
+    @IBOutlet weak var regionFilterBtn: UIButton!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         // populate regions / types / varietals / tastes
-        
-        tableView.dataSource = self
-        tableView.delegate = self
-        
         setup {
             self.updateUI()
         }
     }
 
-    //populate wine lists
+    //populate wine filters
     func setup(completed: @escaping DownloadComplete) {
         Alamofire.request(categoryUrl).responseJSON { response in
             if let JSON = response.result.value as? Dictionary<String, Any> {
@@ -94,15 +94,7 @@ class MainVC: UIViewController, UITableViewDelegate, UITableViewDataSource {
         print(self.varietals)
         print(self.tastes)
         print(self.regions)
-        tableView.reloadData()
-    }
-    
-    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return 10
-    }
-    
-    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        return UITableViewCell()
+        // reloadData
     }
 }
 

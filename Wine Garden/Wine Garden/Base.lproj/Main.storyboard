@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11762" systemVersion="16C67" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11762" systemVersion="16C67" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="cmG-Tx-Ghy">
     <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
@@ -10,10 +10,10 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--MainVC-->
+        <!--DetailVC-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="MainVC" customModule="Wine_Garden" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="BYZ-38-t0r" customClass="DetailVC" customModule="Wine_Garden" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
                         <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
@@ -145,12 +145,84 @@
                         </constraints>
                     </view>
                     <connections>
-                        <outlet property="tableView" destination="tx2-qe-BWq" id="D1f-ou-ipB"/>
+                        <outlet property="tableView" destination="tx2-qe-BWq" id="5fk-Gl-WZW"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="32.799999999999997" y="37.331334332833585"/>
+            <point key="canvasLocation" x="290" y="14"/>
+        </scene>
+        <!--MainVC-->
+        <scene sceneID="DkH-Os-lPA">
+            <objects>
+                <viewController id="cmG-Tx-Ghy" customClass="MainVC" customModule="Wine_Garden" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="AUq-UR-rPE"/>
+                        <viewControllerLayoutGuide type="bottom" id="jdE-kZ-U4R"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="hTX-1O-skk">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="19U-FW-Bwq">
+                                <rect key="frame" x="16" y="567" width="343" height="100"/>
+                                <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="100" id="gLy-Hh-BxE"/>
+                                </constraints>
+                                <state key="normal" title="Button"/>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="0Zw-HG-OVG">
+                                <rect key="frame" x="16" y="467" width="343" height="100"/>
+                                <color key="backgroundColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="100" id="RbO-xH-PET"/>
+                                </constraints>
+                                <state key="normal" title="Button"/>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="UkE-lm-Ov9">
+                                <rect key="frame" x="16" y="267" width="343" height="100"/>
+                                <color key="backgroundColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="100" id="DTH-Vz-HP7"/>
+                                </constraints>
+                                <state key="normal" title="Button"/>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="EgJ-cw-s7m">
+                                <rect key="frame" x="16" y="367" width="343" height="100"/>
+                                <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="100" id="dNA-OL-SEM"/>
+                                </constraints>
+                                <state key="normal" title="Button"/>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="UkE-lm-Ov9" firstAttribute="trailing" secondItem="hTX-1O-skk" secondAttribute="trailingMargin" id="4WQ-Z6-HGG"/>
+                            <constraint firstItem="0Zw-HG-OVG" firstAttribute="leading" secondItem="hTX-1O-skk" secondAttribute="leadingMargin" id="Cec-mB-ttk"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="19U-FW-Bwq" secondAttribute="trailing" id="Ggq-6e-unj"/>
+                            <constraint firstItem="EgJ-cw-s7m" firstAttribute="top" secondItem="UkE-lm-Ov9" secondAttribute="bottom" id="LvI-k2-Vhk"/>
+                            <constraint firstItem="19U-FW-Bwq" firstAttribute="leading" secondItem="hTX-1O-skk" secondAttribute="leadingMargin" id="Mfk-58-JtU"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="0Zw-HG-OVG" secondAttribute="trailing" id="OG6-5H-u9Q"/>
+                            <constraint firstItem="0Zw-HG-OVG" firstAttribute="top" secondItem="EgJ-cw-s7m" secondAttribute="bottom" id="PKg-tW-Z7y"/>
+                            <constraint firstItem="UkE-lm-Ov9" firstAttribute="leading" secondItem="hTX-1O-skk" secondAttribute="leadingMargin" id="fkr-Nt-j2O"/>
+                            <constraint firstItem="EgJ-cw-s7m" firstAttribute="trailing" secondItem="hTX-1O-skk" secondAttribute="trailingMargin" id="k4H-KX-pRE"/>
+                            <constraint firstItem="EgJ-cw-s7m" firstAttribute="leading" secondItem="hTX-1O-skk" secondAttribute="leadingMargin" id="n15-RM-ygG"/>
+                            <constraint firstItem="19U-FW-Bwq" firstAttribute="top" secondItem="0Zw-HG-OVG" secondAttribute="bottom" id="oxl-mH-1I8"/>
+                            <constraint firstItem="jdE-kZ-U4R" firstAttribute="top" secondItem="19U-FW-Bwq" secondAttribute="bottom" id="tqe-8w-Kbo"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="regionFilterBtn" destination="19U-FW-Bwq" id="wcF-XE-iVx"/>
+                        <outlet property="tasteFilterBtn" destination="0Zw-HG-OVG" id="BPq-so-Lfg"/>
+                        <outlet property="typeFilterBtn" destination="UkE-lm-Ov9" id="KcP-tL-ZQZ"/>
+                        <outlet property="varietalFilterBtn" destination="EgJ-cw-s7m" id="Pok-vb-itf"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Jqc-7a-zbo" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-375" y="14"/>
         </scene>
     </scenes>
     <resources>
