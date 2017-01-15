@@ -172,6 +172,14 @@
                                 </constraints>
                                 <state key="normal" title="Button"/>
                             </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="EgJ-cw-s7m">
+                                <rect key="frame" x="16" y="367" width="343" height="100"/>
+                                <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="100" id="dNA-OL-SEM"/>
+                                </constraints>
+                                <state key="normal" title="Button"/>
+                            </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="0Zw-HG-OVG">
                                 <rect key="frame" x="16" y="467" width="343" height="100"/>
                                 <color key="backgroundColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
@@ -188,18 +196,22 @@
                                 </constraints>
                                 <state key="normal" title="Button"/>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="EgJ-cw-s7m">
-                                <rect key="frame" x="16" y="367" width="343" height="100"/>
-                                <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="8QF-aE-7LD">
+                                <rect key="frame" x="172" y="229" width="30" height="30"/>
                                 <constraints>
-                                    <constraint firstAttribute="height" constant="100" id="dNA-OL-SEM"/>
+                                    <constraint firstAttribute="height" constant="30" id="2f3-H3-M6y"/>
+                                    <constraint firstAttribute="width" constant="30" id="JiG-p2-iXb"/>
                                 </constraints>
-                                <state key="normal" title="Button"/>
+                                <state key="normal" title="GO!"/>
+                                <connections>
+                                    <action selector="applyFilter:" destination="cmG-Tx-Ghy" eventType="touchUpInside" id="eqE-DH-u7p"/>
+                                </connections>
                             </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
                             <constraint firstItem="UkE-lm-Ov9" firstAttribute="trailing" secondItem="hTX-1O-skk" secondAttribute="trailingMargin" id="4WQ-Z6-HGG"/>
+                            <constraint firstItem="UkE-lm-Ov9" firstAttribute="top" secondItem="8QF-aE-7LD" secondAttribute="bottom" constant="8" id="9rj-rX-qoo"/>
                             <constraint firstItem="0Zw-HG-OVG" firstAttribute="leading" secondItem="hTX-1O-skk" secondAttribute="leadingMargin" id="Cec-mB-ttk"/>
                             <constraint firstAttribute="trailingMargin" secondItem="19U-FW-Bwq" secondAttribute="trailing" id="Ggq-6e-unj"/>
                             <constraint firstItem="EgJ-cw-s7m" firstAttribute="top" secondItem="UkE-lm-Ov9" secondAttribute="bottom" id="LvI-k2-Vhk"/>
@@ -210,14 +222,15 @@
                             <constraint firstItem="EgJ-cw-s7m" firstAttribute="trailing" secondItem="hTX-1O-skk" secondAttribute="trailingMargin" id="k4H-KX-pRE"/>
                             <constraint firstItem="EgJ-cw-s7m" firstAttribute="leading" secondItem="hTX-1O-skk" secondAttribute="leadingMargin" id="n15-RM-ygG"/>
                             <constraint firstItem="19U-FW-Bwq" firstAttribute="top" secondItem="0Zw-HG-OVG" secondAttribute="bottom" id="oxl-mH-1I8"/>
+                            <constraint firstItem="8QF-aE-7LD" firstAttribute="centerX" secondItem="hTX-1O-skk" secondAttribute="centerX" id="ppl-OD-0Q9"/>
                             <constraint firstItem="jdE-kZ-U4R" firstAttribute="top" secondItem="19U-FW-Bwq" secondAttribute="bottom" id="tqe-8w-Kbo"/>
                         </constraints>
                     </view>
                     <connections>
-                        <outlet property="regionFilterBtn" destination="19U-FW-Bwq" id="wcF-XE-iVx"/>
-                        <outlet property="tasteFilterBtn" destination="0Zw-HG-OVG" id="BPq-so-Lfg"/>
-                        <outlet property="typeFilterBtn" destination="UkE-lm-Ov9" id="KcP-tL-ZQZ"/>
-                        <outlet property="varietalFilterBtn" destination="EgJ-cw-s7m" id="Pok-vb-itf"/>
+                        <outlet property="regionFilterBtn" destination="19U-FW-Bwq" id="H8m-eP-2Nj"/>
+                        <outlet property="tasteFilterBtn" destination="0Zw-HG-OVG" id="yrc-Q4-Qr5"/>
+                        <outlet property="typeFilterBtn" destination="UkE-lm-Ov9" id="pnQ-cn-c4d"/>
+                        <outlet property="varietalFilterBtn" destination="EgJ-cw-s7m" id="yBT-4d-Uyx"/>
                         <segue destination="BYZ-38-t0r" kind="show" identifier="DetailVC" id="ufS-2I-yNO"/>
                     </connections>
                 </viewController>

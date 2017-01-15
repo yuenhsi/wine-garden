@@ -16,6 +16,11 @@ class MainVC: UIViewController {
     var tastes: Dictionary<String, Int> = [:]
     var regions: Dictionary<String, Int> = [:]
     
+    var typeFilterIDs = [String]()
+    var varietalFilterIDs = [String]()
+    var tasteFilterIDs = [String]()
+    var regionFilterIDs = [String]()
+    
     
     @IBOutlet weak var typeFilterBtn: UIButton!
     @IBOutlet weak var varietalFilterBtn: UIButton!
@@ -29,9 +34,27 @@ class MainVC: UIViewController {
             self.updateUI()
         }
     }
-
+    
+    @IBAction func applyFilter(_ sender: Any) {
+        
+        let allFilters = [typeFilterIDs, varietalFilterIDs, tasteFilterIDs, regionFilterIDs]
+        performSegue(withIdentifier: "DetailVC", sender: allFilters)
+    }
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        
+        if segue.identifier == "DetailVC" {
+            if let segueVC = segue.destination as? DetailVC {
+                if let allFilters = sender as? [[String]] {
+                    segueVC.filters = allFilters
+                }
+            }
+        }
+    }
+    
     //populate wine filters
     func setup(completed: @escaping DownloadComplete) {
+        
         Alamofire.request(categoryUrl).responseJSON { response in
             if let JSON = response.result.value as? Dictionary<String, Any> {
                 if let categories = JSON["Categories"] as? [Dictionary<String, Any>] {
