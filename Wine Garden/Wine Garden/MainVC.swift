@@ -16,10 +16,7 @@ class MainVC: UIViewController {
     var tastes: Dictionary<String, Int> = [:]
     var regions: Dictionary<String, Int> = [:]
     
-    var typeFilterIDs = [String]()
-    var varietalFilterIDs = [String]()
-    var tasteFilterIDs = [String]()
-    var regionFilterIDs = [String]()
+    var filterIDs = [Int]()
     
     
     @IBOutlet weak var typeFilterBtn: UIButton!
@@ -37,16 +34,16 @@ class MainVC: UIViewController {
     
     @IBAction func applyFilter(_ sender: Any) {
         
-        let allFilters = [typeFilterIDs, varietalFilterIDs, tasteFilterIDs, regionFilterIDs]
-        performSegue(withIdentifier: "DetailVC", sender: allFilters)
+        filterIDs = [490, 124, 143]
+        performSegue(withIdentifier: "DetailVC", sender: filterIDs)
     }
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         
         if segue.identifier == "DetailVC" {
             if let segueVC = segue.destination as? DetailVC {
-                if let allFilters = sender as? [[String]] {
-                    segueVC.filters = allFilters
+                if let filterIDs = sender as? [[String]] {
+                    segueVC.filters = filterIDs
                 }
             }
         }
@@ -57,7 +54,9 @@ class MainVC: UIViewController {
         
         Alamofire.request(categoryUrl).responseJSON { response in
             if let JSON = response.result.value as? Dictionary<String, Any> {
+                print(JSON)
                 if let categories = JSON["Categories"] as? [Dictionary<String, Any>] {
+                    print(categories)
                     for category in categories {
                         if let name = category["Name"] as? String {
                             switch name {

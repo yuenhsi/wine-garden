@@ -21,6 +21,10 @@ class DetailVC: UIViewController, UITableViewDelegate, UITableViewDataSource {
         tableView.dataSource = self
         tableView.delegate = self
         
+        // what we need: (490+140+10038)&size=10
+        let whatweneed = ""
+        let catalogUrl = "\(baseUrl)\(catalogExt)\(whatweneed)&apikey=\(apikey)"
+        
         setup {
             self.updateUI()
         }
