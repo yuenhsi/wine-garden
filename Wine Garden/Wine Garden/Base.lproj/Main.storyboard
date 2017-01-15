@@ -218,6 +218,7 @@
                         <outlet property="tasteFilterBtn" destination="0Zw-HG-OVG" id="BPq-so-Lfg"/>
                         <outlet property="typeFilterBtn" destination="UkE-lm-Ov9" id="KcP-tL-ZQZ"/>
                         <outlet property="varietalFilterBtn" destination="EgJ-cw-s7m" id="Pok-vb-itf"/>
+                        <segue destination="BYZ-38-t0r" kind="show" identifier="DetailVC" id="ufS-2I-yNO"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Jqc-7a-zbo" userLabel="First Responder" sceneMemberID="firstResponder"/>
