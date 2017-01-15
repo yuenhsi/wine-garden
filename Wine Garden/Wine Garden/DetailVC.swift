@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import Alamofire
 
 class DetailVC: UIViewController, UITableViewDelegate, UITableViewDataSource {
 
@@ -20,7 +21,9 @@ class DetailVC: UIViewController, UITableViewDelegate, UITableViewDataSource {
         tableView.dataSource = self
         tableView.delegate = self
         
-        setup()
+        setup {
+            self.updateUI()
+        }
     }
 
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
@@ -32,8 +35,15 @@ class DetailVC: UIViewController, UITableViewDelegate, UITableViewDataSource {
         return cell
     }
     
-    func setup() {
-        Alamofire.request(categoryUrl).responseJSON { response in
+    // populate table view with wines
+    func setup(completed: @escaping DownloadComplete) {
+        
+        let filterURL = ""
+        Alamofire.request(filterURL).responseJSON { response in
         }
+    }
+    
+    func updateUI() {
+        
     }
 }
