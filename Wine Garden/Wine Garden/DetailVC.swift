@@ -13,6 +13,7 @@ class DetailVC: UIViewController, UITableViewDelegate, UITableViewDataSource
 {
 
     @IBOutlet weak var tableView: UITableView!
+    var wineCells: [WineCell]!
     var filters: [Int]!
     var catalogUrl: String!
     
