@@ -13,7 +13,7 @@ class DetailVC: UIViewController, UITableViewDelegate, UITableViewDataSource
 {
 
     @IBOutlet weak var tableView: UITableView!
-    var wineCells = [WineCell]()
+    var wines = [Wine]()
     var filters: [Int]!
     var catalogUrl: String!
     
@@ -41,15 +41,17 @@ class DetailVC: UIViewController, UITableViewDelegate, UITableViewDataSource
 
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int
     {
-        return 10
-//        return wineCells.count
+        return wines.count
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell
     {
-        let cell = tableView.dequeueReusableCell(withIdentifier: "WineCell") as! WineCell
-        cell.configureCell()
-        return cell
+        if let cell = tableView.dequeueReusableCell(withIdentifier: "WineCell") as? WineCell {
+            cell.configureCell(wine: wines[indexPath.row])
+            return cell
+        } else {
+            return UITableViewCell()
+        }
     }
     
     // populate table view with wines
@@ -114,9 +116,7 @@ class DetailVC: UIViewController, UITableViewDelegate, UITableViewDataSource
                                     print("thumbnail url is \(thumbnail)")
                                 }
                             }
-                            let wineCell = WineCell()
-                            wineCell.wine = newWine
-                            self.wineCells.append(wineCell)
+                            self.wines.append(newWine)
                             
                         }
                     }
@@ -128,10 +128,6 @@ class DetailVC: UIViewController, UITableViewDelegate, UITableViewDataSource
     
     func updateUI()
     {
-        for cell in wineCells
-        {
-            cell.configureCell()
-         }
         tableView.reloadData()
     }
 }

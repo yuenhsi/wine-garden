@@ -18,9 +18,7 @@ class WineCell: UITableViewCell {
     @IBOutlet weak var appelationLbl: UILabel!
     @IBOutlet weak var regionLbl: UILabel!
     
-    var wine: Wine!
-    
-    func configureCell() {
+    func configureCell(wine: Wine) {
         
         // set thumb img
         nameLbl.text = wine.name
