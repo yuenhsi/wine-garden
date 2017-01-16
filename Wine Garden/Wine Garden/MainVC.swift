@@ -54,9 +54,7 @@ class MainVC: UIViewController {
         
         Alamofire.request(categoryUrl).responseJSON { response in
             if let JSON = response.result.value as? Dictionary<String, Any> {
-                print(JSON)
                 if let categories = JSON["Categories"] as? [Dictionary<String, Any>] {
-                    print(categories)
                     for category in categories {
                         if let name = category["Name"] as? String {
                             switch name {

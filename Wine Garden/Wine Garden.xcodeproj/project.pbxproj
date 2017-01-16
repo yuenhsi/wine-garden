@@ -7,7 +7,6 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		5AB590C21E29BC92002144A8 /* DetailVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5AB590C11E29BC92002144A8 /* DetailVC.swift */; };
 		5AB6FE901E294A8D00BBD32F /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5AB6FE8F1E294A8D00BBD32F /* AppDelegate.swift */; };
 		5AB6FE921E294A8D00BBD32F /* MainVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5AB6FE911E294A8D00BBD32F /* MainVC.swift */; };
 		5AB6FE951E294A8D00BBD32F /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5AB6FE931E294A8D00BBD32F /* Main.storyboard */; };
@@ -17,6 +16,7 @@
 		5AB6FEA81E295A9400BBD32F /* Wine.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5AB6FEA71E295A9400BBD32F /* Wine.swift */; };
 		5AB6FEAA1E295C1400BBD32F /* WineCategories.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5AB6FEA91E295C1400BBD32F /* WineCategories.swift */; };
 		B3ABADF31E2C2B7900233FDD /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = B3ABADF21E2C2B7900233FDD /* Constants.swift */; };
+		B3ABADF51E2C539D00233FDD /* DetailVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5AB590C11E29BC92002144A8 /* DetailVC.swift */; };
 		F53F715E7659065646E9A0BA /* Pods_Wine_Garden.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E7162C024F1592F000EF8322 /* Pods_Wine_Garden.framework */; };
 /* End PBXBuildFile section */
 
@@ -264,7 +264,7 @@
 				5AB6FEA61E2958A200BBD32F /* WineCell.swift in Sources */,
 				B3ABADF31E2C2B7900233FDD /* Constants.swift in Sources */,
 				5AB6FEAA1E295C1400BBD32F /* WineCategories.swift in Sources */,
-				5AB590C21E29BC92002144A8 /* DetailVC.swift in Sources */,
+				B3ABADF51E2C539D00233FDD /* DetailVC.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

@@ -53,7 +53,7 @@ class DetailVC: UIViewController, UITableViewDelegate, UITableViewDataSource
     func setup(completed: @escaping DownloadComplete)
     {
         Alamofire.request(catalogUrl).responseJSON { response in
-            // Vintage, Name, ID, Labels-Url, Varietal - WineType-Name  Varietal-Name, Appellation-Region-Name
+            // Labels-Url
             if let JSON = response.result.value as? Dictionary<String, Any>
             {
                 if let products = JSON["Products"] as? Dictionary<String, Any>
@@ -62,15 +62,51 @@ class DetailVC: UIViewController, UITableViewDelegate, UITableViewDataSource
                     {
                         for list in lists
                         {
-                            if let id = list["Id"] as? Int
+                            if let id = list["Id"] as? Int 
                             {
-                                
+                                print("ID is \(id)")
+                            }
+                            if let name = list["Name"] as? String
+                            {
+                                print("Name is \(name)")
+                            }
+                            if let vintage = list["Vintage"] as? String
+                            {
+                                print("Vintage is \(vintage)")
+                            }
+                            if let appelation = list["Appellation"] as? Dictionary<String, Any>
+                            {
+                                if let appelationName = appelation["Name"] as? String
+                                {
+                                    print("App Name is \(appelationName)")
+                                }
+                                if let region = appelation["Region"] as? Dictionary<String, Any>
+                                {
+                                    if let regionName = region["Name"] as? String
+                                    {
+                                        print("regionName is \(regionName)")
+                                    }
+                                }
+                            }
+                            if let varietal = list["Varietal"] as? Dictionary<String, Any>
+                            {
+                                if let varietalName = varietal["Name"] as? String
+                                {
+                                    print("varietalName is \(varietalName)")
+                                }
+                            }
+                            if let label = list["Labels"] as? [Dictionary<String, String>], label.count > 0
+                            {
+                                if let thumbnail = label[0]["Url"]
+                                {
+                                    print("thumbnail url is \(thumbnail)")
+                                }
                             }
                         }
                     }
                 }
             }
-            
+            completed()
         }
     }
     
