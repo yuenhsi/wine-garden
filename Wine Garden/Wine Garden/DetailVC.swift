@@ -13,7 +13,7 @@ class DetailVC: UIViewController, UITableViewDelegate, UITableViewDataSource
 {
 
     @IBOutlet weak var tableView: UITableView!
-    var wineCells: [WineCell]!
+    var wineCells = [WineCell]()
     var filters: [Int]!
     var catalogUrl: String!
     
@@ -42,11 +42,13 @@ class DetailVC: UIViewController, UITableViewDelegate, UITableViewDataSource
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int
     {
         return 10
+//        return wineCells.count
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell
     {
         let cell = tableView.dequeueReusableCell(withIdentifier: "WineCell") as! WineCell
+        cell.configureCell()
         return cell
     }
     
@@ -63,28 +65,35 @@ class DetailVC: UIViewController, UITableViewDelegate, UITableViewDataSource
                     {
                         for list in lists
                         {
+                            let newWine = Wine()
+                            
                             if let id = list["Id"] as? Int 
                             {
+                                newWine.id = id
                                 print("ID is \(id)")
                             }
                             if let name = list["Name"] as? String
                             {
+                                newWine.name = name
                                 print("Name is \(name)")
                             }
                             if let vintage = list["Vintage"] as? String
                             {
+                                newWine.vintage = vintage
                                 print("Vintage is \(vintage)")
                             }
                             if let appelation = list["Appellation"] as? Dictionary<String, Any>
                             {
                                 if let appelationName = appelation["Name"] as? String
                                 {
+                                    newWine.appellation = appelationName
                                     print("App Name is \(appelationName)")
                                 }
                                 if let region = appelation["Region"] as? Dictionary<String, Any>
                                 {
                                     if let regionName = region["Name"] as? String
                                     {
+                                        newWine.region = regionName
                                         print("regionName is \(regionName)")
                                     }
                                 }
@@ -93,6 +102,7 @@ class DetailVC: UIViewController, UITableViewDelegate, UITableViewDataSource
                             {
                                 if let varietalName = varietal["Name"] as? String
                                 {
+                                    newWine.varietal = varietalName
                                     print("varietalName is \(varietalName)")
                                 }
                             }
@@ -100,9 +110,14 @@ class DetailVC: UIViewController, UITableViewDelegate, UITableViewDataSource
                             {
                                 if let thumbnail = label[0]["Url"]
                                 {
+                                    newWine.labelImageUrl = thumbnail
                                     print("thumbnail url is \(thumbnail)")
                                 }
                             }
+                            let wineCell = WineCell()
+                            wineCell.wine = newWine
+                            self.wineCells.append(wineCell)
+                            
                         }
                     }
                 }
@@ -113,6 +128,10 @@ class DetailVC: UIViewController, UITableViewDelegate, UITableViewDataSource
     
     func updateUI()
     {
-        
+        for cell in wineCells
+        {
+            cell.configureCell()
+         }
+        tableView.reloadData()
     }
 }
