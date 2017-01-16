@@ -16,7 +16,7 @@
 		5AB6FEA61E2958A200BBD32F /* WineCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5AB6FEA51E2958A200BBD32F /* WineCell.swift */; };
 		5AB6FEA81E295A9400BBD32F /* Wine.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5AB6FEA71E295A9400BBD32F /* Wine.swift */; };
 		5AB6FEAA1E295C1400BBD32F /* WineCategories.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5AB6FEA91E295C1400BBD32F /* WineCategories.swift */; };
-		5AB6FEAC1E298CA600BBD32F /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5AB6FEAB1E298CA600BBD32F /* Constants.swift */; };
+		B3ABADF31E2C2B7900233FDD /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = B3ABADF21E2C2B7900233FDD /* Constants.swift */; };
 		F53F715E7659065646E9A0BA /* Pods_Wine_Garden.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E7162C024F1592F000EF8322 /* Pods_Wine_Garden.framework */; };
 /* End PBXBuildFile section */
 
@@ -32,7 +32,7 @@
 		5AB6FEA51E2958A200BBD32F /* WineCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WineCell.swift; sourceTree = "<group>"; };
 		5AB6FEA71E295A9400BBD32F /* Wine.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Wine.swift; sourceTree = "<group>"; };
 		5AB6FEA91E295C1400BBD32F /* WineCategories.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WineCategories.swift; sourceTree = "<group>"; };
-		5AB6FEAB1E298CA600BBD32F /* Constants.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
+		B3ABADF21E2C2B7900233FDD /* Constants.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
 		D1F2B4EFC5D712F8643DBA0C /* Pods-Wine Garden.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Wine Garden.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Wine Garden/Pods-Wine Garden.debug.xcconfig"; sourceTree = "<group>"; };
 		DD415E96B7645D68B31C361A /* Pods-Wine Garden.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Wine Garden.release.xcconfig"; path = "Pods/Target Support Files/Pods-Wine Garden/Pods-Wine Garden.release.xcconfig"; sourceTree = "<group>"; };
 		E7162C024F1592F000EF8322 /* Pods_Wine_Garden.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Wine_Garden.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -113,7 +113,7 @@
 			children = (
 				5AB6FE961E294A8D00BBD32F /* Assets.xcassets */,
 				5AB6FE9B1E294A8D00BBD32F /* Info.plist */,
-				5AB6FEAB1E298CA600BBD32F /* Constants.swift */,
+				B3ABADF21E2C2B7900233FDD /* Constants.swift */,
 			);
 			name = Resources;
 			sourceTree = "<group>";
@@ -262,8 +262,8 @@
 				5AB6FE921E294A8D00BBD32F /* MainVC.swift in Sources */,
 				5AB6FE901E294A8D00BBD32F /* AppDelegate.swift in Sources */,
 				5AB6FEA61E2958A200BBD32F /* WineCell.swift in Sources */,
+				B3ABADF31E2C2B7900233FDD /* Constants.swift in Sources */,
 				5AB6FEAA1E295C1400BBD32F /* WineCategories.swift in Sources */,
-				5AB6FEAC1E298CA600BBD32F /* Constants.swift in Sources */,
 				5AB590C21E29BC92002144A8 /* DetailVC.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

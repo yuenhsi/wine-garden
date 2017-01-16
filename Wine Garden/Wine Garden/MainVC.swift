@@ -42,7 +42,7 @@ class MainVC: UIViewController {
         
         if segue.identifier == "DetailVC" {
             if let segueVC = segue.destination as? DetailVC {
-                if let filterIDs = sender as? [[String]] {
+                if let filterIDs = sender as? [Int] {
                     segueVC.filters = filterIDs
                 }
             }
