@@ -84,7 +84,7 @@
                                                                             <nil key="textColor"/>
                                                                             <nil key="highlightedColor"/>
                                                                         </label>
-                                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="TYPE" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Zj8-rl-vp4">
+                                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="APPELLATION" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Zj8-rl-vp4">
                                                                             <rect key="frame" x="129.5" y="0.0" width="129.5" height="20.5"/>
                                                                             <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                                             <nil key="textColor"/>
@@ -125,10 +125,10 @@
                                             </constraints>
                                         </tableViewCellContentView>
                                         <connections>
+                                            <outlet property="appelationLbl" destination="Zj8-rl-vp4" id="beE-6W-bAh"/>
                                             <outlet property="nameLbl" destination="x9e-bm-7dl" id="LV1-3l-b1b"/>
                                             <outlet property="regionLbl" destination="8RJ-j8-g5T" id="WEM-iZ-r5l"/>
                                             <outlet property="thumbImg" destination="RrA-my-xlz" id="Hjw-DL-ISy"/>
-                                            <outlet property="typeLbl" destination="Zj8-rl-vp4" id="uCO-61-vRl"/>
                                             <outlet property="varietalLbl" destination="3j2-Ls-mal" id="WPU-sr-dl9"/>
                                             <outlet property="yearLbl" destination="ftn-XX-uQE" id="Vey-wC-dPB"/>
                                         </connections>

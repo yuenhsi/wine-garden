@@ -10,13 +10,17 @@ import UIKit
 
 class Wine {
     
-    var type: WineType!
-    var varietal: WineVarietal!
-    var style: WineStyle!
-    var region: WineRegion!
-    var vintage: WineVintage!
-    var attributes: WineAttributes!
-    var appellation: WineAppelation?
-    var label: UIImage!
+    var id: Int!
+    var name: String!
     
+    var vintage: String?
+    var appellation: String?
+    var region: String?
+    var varietal: String?
+    var labelImageUrl: String?
+    
+    // currently not being populated
+    var type: String?
+    var style: String?
+    var attributes: String?
 }
