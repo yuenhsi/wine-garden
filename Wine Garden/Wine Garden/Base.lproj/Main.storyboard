@@ -56,7 +56,7 @@
                                                                             <nil key="textColor"/>
                                                                             <nil key="highlightedColor"/>
                                                                         </label>
-                                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="YEAR" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ftn-XX-uQE">
+                                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="VINTAGE" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ftn-XX-uQE">
                                                                             <rect key="frame" x="129.5" y="0.0" width="129.5" height="20.5"/>
                                                                             <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                                             <nil key="textColor"/>
@@ -130,7 +130,7 @@
                                             <outlet property="regionLbl" destination="8RJ-j8-g5T" id="WEM-iZ-r5l"/>
                                             <outlet property="thumbImg" destination="RrA-my-xlz" id="Hjw-DL-ISy"/>
                                             <outlet property="varietalLbl" destination="3j2-Ls-mal" id="WPU-sr-dl9"/>
-                                            <outlet property="yearLbl" destination="ftn-XX-uQE" id="Vey-wC-dPB"/>
+                                            <outlet property="vintageLbl" destination="ftn-XX-uQE" id="xCf-No-Cjs"/>
                                         </connections>
                                     </tableViewCell>
                                 </prototypes>
