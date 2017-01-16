@@ -20,12 +20,25 @@ class WineCell: UITableViewCell {
     
     func configureCell(wine: Wine) {
         
-        // set thumb img
         nameLbl.text = wine.name
         vintageLbl.text = wine.vintage ?? ""
         varietalLbl.text = wine.varietal ?? ""
         appelationLbl.text = wine.appellation ?? ""
         regionLbl.text = wine.region ?? ""
+        
+        if let imageUrl = wine.labelImageUrl {
+            let url = URL(string: imageUrl)
+            
+            DispatchQueue.global().async {
+                if let data = try? Data(contentsOf: url!) {
+                    DispatchQueue.main.async {
+                        self.thumbImg.image = UIImage(data: data)
+                    }
+                }
+            }
+        }
+        
+
         
     }
     
