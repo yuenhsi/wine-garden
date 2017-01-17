@@ -10,6 +10,55 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
+        <!--FilterVC-->
+        <scene sceneID="5Fh-Sn-j7Q">
+            <objects>
+                <viewController id="phl-tG-xM9" customClass="FilterVC" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="Slj-yn-6hR"/>
+                        <viewControllerLayoutGuide type="bottom" id="oWs-BK-xoK"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="xtm-de-GPD">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="grouped" separatorStyle="default" rowHeight="44" sectionHeaderHeight="18" sectionFooterHeight="18" translatesAutoresizingMaskIntoConstraints="NO" id="9mh-6F-nlR">
+                                <rect key="frame" x="0.0" y="20" width="375" height="647"/>
+                                <color key="backgroundColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
+                                <prototypes>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" accessoryType="checkmark" indentationWidth="10" reuseIdentifier="WineFilterCell" textLabel="Wrb-qP-xaB" style="IBUITableViewCellStyleDefault" id="Ylh-o6-BHY">
+                                        <rect key="frame" x="0.0" y="56" width="375" height="44"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="Ylh-o6-BHY" id="bh1-4h-B90">
+                                            <rect key="frame" x="0.0" y="0.0" width="336" height="43"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" text="Title" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="Wrb-qP-xaB">
+                                                    <rect key="frame" x="15" y="0.0" width="321" height="43"/>
+                                                    <autoresizingMask key="autoresizingMask"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                            </subviews>
+                                        </tableViewCellContentView>
+                                    </tableViewCell>
+                                </prototypes>
+                            </tableView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstAttribute="trailing" secondItem="9mh-6F-nlR" secondAttribute="trailing" id="CU9-aI-988"/>
+                            <constraint firstItem="oWs-BK-xoK" firstAttribute="top" secondItem="9mh-6F-nlR" secondAttribute="bottom" id="aVT-S4-l2n"/>
+                            <constraint firstItem="9mh-6F-nlR" firstAttribute="top" secondItem="Slj-yn-6hR" secondAttribute="bottom" id="ag0-CR-nzm"/>
+                            <constraint firstItem="9mh-6F-nlR" firstAttribute="leading" secondItem="xtm-de-GPD" secondAttribute="leading" id="sZk-uN-TUa"/>
+                        </constraints>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Geg-BB-Pwn" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="466" y="14"/>
+        </scene>
         <!--DetailVC-->
         <scene sceneID="tne-QT-ifu">
             <objects>
@@ -150,7 +199,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="290" y="14"/>
+            <point key="canvasLocation" x="-375" y="766"/>
         </scene>
         <!--MainVC-->
         <scene sceneID="DkH-Os-lPA">
@@ -232,6 +281,7 @@
                         <outlet property="typeFilterBtn" destination="UkE-lm-Ov9" id="pnQ-cn-c4d"/>
                         <outlet property="varietalFilterBtn" destination="EgJ-cw-s7m" id="yBT-4d-Uyx"/>
                         <segue destination="BYZ-38-t0r" kind="show" identifier="DetailVC" id="ufS-2I-yNO"/>
+                        <segue destination="phl-tG-xM9" kind="showDetail" identifier="FilterVC" id="Hhk-f6-1ul"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Jqc-7a-zbo" userLabel="First Responder" sceneMemberID="firstResponder"/>

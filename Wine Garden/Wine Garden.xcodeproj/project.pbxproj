@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		5A279CA61E2E9C9B00E90E4E /* WineFilterCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A279CA51E2E9C9B00E90E4E /* WineFilterCell.swift */; };
+		5A279CAA1E2E9CF600E90E4E /* FilterVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A279CA91E2E9CF600E90E4E /* FilterVC.swift */; };
 		5AB6FE901E294A8D00BBD32F /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5AB6FE8F1E294A8D00BBD32F /* AppDelegate.swift */; };
 		5AB6FE921E294A8D00BBD32F /* MainVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5AB6FE911E294A8D00BBD32F /* MainVC.swift */; };
 		5AB6FE951E294A8D00BBD32F /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5AB6FE931E294A8D00BBD32F /* Main.storyboard */; };
@@ -20,6 +22,8 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		5A279CA51E2E9C9B00E90E4E /* WineFilterCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WineFilterCell.swift; sourceTree = "<group>"; };
+		5A279CA91E2E9CF600E90E4E /* FilterVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FilterVC.swift; sourceTree = "<group>"; };
 		5AB590C11E29BC92002144A8 /* DetailVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DetailVC.swift; sourceTree = "<group>"; };
 		5AB6FE8C1E294A8D00BBD32F /* Wine Garden.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Wine Garden.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		5AB6FE8F1E294A8D00BBD32F /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -82,6 +86,7 @@
 			children = (
 				5AB6FE911E294A8D00BBD32F /* MainVC.swift */,
 				5AB590C11E29BC92002144A8 /* DetailVC.swift */,
+				5A279CA91E2E9CF600E90E4E /* FilterVC.swift */,
 				5AB6FE8F1E294A8D00BBD32F /* AppDelegate.swift */,
 			);
 			name = Controller;
@@ -101,6 +106,7 @@
 			children = (
 				5AB6FEA51E2958A200BBD32F /* WineCell.swift */,
 				5AB6FEA71E295A9400BBD32F /* Wine.swift */,
+				5A279CA51E2E9C9B00E90E4E /* WineFilterCell.swift */,
 			);
 			name = Model;
 			sourceTree = "<group>";
@@ -255,7 +261,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				5A279CAA1E2E9CF600E90E4E /* FilterVC.swift in Sources */,
 				5AB6FEA81E295A9400BBD32F /* Wine.swift in Sources */,
+				5A279CA61E2E9C9B00E90E4E /* WineFilterCell.swift in Sources */,
 				5AB6FE921E294A8D00BBD32F /* MainVC.swift in Sources */,
 				5AB6FE901E294A8D00BBD32F /* AppDelegate.swift in Sources */,
 				5AB6FEA61E2958A200BBD32F /* WineCell.swift in Sources */,
