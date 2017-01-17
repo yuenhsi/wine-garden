@@ -18,18 +18,28 @@ class MainVC: UIViewController {
     
     var filterIDs = [Int]()
     
-    
-    @IBOutlet weak var typeFilterBtn: UIButton!
-    @IBOutlet weak var varietalFilterBtn: UIButton!
-    @IBOutlet weak var tasteFilterBtn: UIButton!
-    @IBOutlet weak var regionFilterBtn: UIButton!
-    
     override func viewDidLoad() {
         super.viewDidLoad()
         // populate regions / types / varietals / tastes
         setup {
             self.updateUI()
         }
+    }
+    
+    @IBAction func filterOneBtnPressed(_ sender: Any) {
+        performSegue(withIdentifier: "FilterVC", sender: types)
+    }
+    
+    @IBAction func filterTwoBtnPressed(_ sender: Any) {
+        performSegue(withIdentifier: "FilterVC", sender: varietals)
+    }
+    
+    @IBAction func filterThreeBtnPressed(_ sender: Any) {
+        performSegue(withIdentifier: "FilterVC", sender: tastes)
+    }
+    
+    @IBAction func filterFourBtnPressed(_ sender: Any) {
+        performSegue(withIdentifier: "FilterVC", sender: regions)
     }
     
     @IBAction func applyFilter(_ sender: Any) {
@@ -44,6 +54,13 @@ class MainVC: UIViewController {
             if let segueVC = segue.destination as? DetailVC {
                 if let filterIDs = sender as? [Int] {
                     segueVC.filters = filterIDs
+                }
+            }
+        }
+        else if segue.identifier == "FilterVC" {
+            if let segueVC = segue.destination as? FilterVC {
+                if let filterOptions = sender as? Dictionary<String, Int> {
+                    segueVC.options = filterOptions
                 }
             }
         }

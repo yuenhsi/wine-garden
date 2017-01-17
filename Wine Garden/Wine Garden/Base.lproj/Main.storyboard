@@ -54,6 +54,9 @@
                             <constraint firstItem="9mh-6F-nlR" firstAttribute="leading" secondItem="xtm-de-GPD" secondAttribute="leading" id="sZk-uN-TUa"/>
                         </constraints>
                     </view>
+                    <connections>
+                        <outlet property="tableView" destination="9mh-6F-nlR" id="GwR-MY-Vu6"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Geg-BB-Pwn" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -220,6 +223,9 @@
                                     <constraint firstAttribute="height" constant="100" id="gLy-Hh-BxE"/>
                                 </constraints>
                                 <state key="normal" title="Button"/>
+                                <connections>
+                                    <action selector="filterFourBtnPressed:" destination="cmG-Tx-Ghy" eventType="touchUpInside" id="oSl-ma-Vxw"/>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="EgJ-cw-s7m">
                                 <rect key="frame" x="16" y="367" width="343" height="100"/>
@@ -228,6 +234,9 @@
                                     <constraint firstAttribute="height" constant="100" id="dNA-OL-SEM"/>
                                 </constraints>
                                 <state key="normal" title="Button"/>
+                                <connections>
+                                    <action selector="filterTwoBtnPressed:" destination="cmG-Tx-Ghy" eventType="touchUpInside" id="Cnt-rC-OLD"/>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="0Zw-HG-OVG">
                                 <rect key="frame" x="16" y="467" width="343" height="100"/>
@@ -236,6 +245,9 @@
                                     <constraint firstAttribute="height" constant="100" id="RbO-xH-PET"/>
                                 </constraints>
                                 <state key="normal" title="Button"/>
+                                <connections>
+                                    <action selector="filterThreeBtnPressed:" destination="cmG-Tx-Ghy" eventType="touchUpInside" id="tXt-c5-t09"/>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="UkE-lm-Ov9">
                                 <rect key="frame" x="16" y="267" width="343" height="100"/>
@@ -244,6 +256,9 @@
                                     <constraint firstAttribute="height" constant="100" id="DTH-Vz-HP7"/>
                                 </constraints>
                                 <state key="normal" title="Button"/>
+                                <connections>
+                                    <action selector="filterOneBtnPressed:" destination="cmG-Tx-Ghy" eventType="touchUpInside" id="sqL-Rh-fua"/>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="8QF-aE-7LD">
                                 <rect key="frame" x="172" y="229" width="30" height="30"/>
@@ -276,10 +291,6 @@
                         </constraints>
                     </view>
                     <connections>
-                        <outlet property="regionFilterBtn" destination="19U-FW-Bwq" id="H8m-eP-2Nj"/>
-                        <outlet property="tasteFilterBtn" destination="0Zw-HG-OVG" id="yrc-Q4-Qr5"/>
-                        <outlet property="typeFilterBtn" destination="UkE-lm-Ov9" id="pnQ-cn-c4d"/>
-                        <outlet property="varietalFilterBtn" destination="EgJ-cw-s7m" id="yBT-4d-Uyx"/>
                         <segue destination="BYZ-38-t0r" kind="show" identifier="DetailVC" id="ufS-2I-yNO"/>
                         <segue destination="phl-tG-xM9" kind="showDetail" identifier="FilterVC" id="Hhk-f6-1ul"/>
                     </connections>
