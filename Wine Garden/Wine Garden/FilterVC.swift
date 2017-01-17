@@ -13,11 +13,14 @@ class FilterVC: UIViewController, UITableViewDelegate, UITableViewDataSource {
     @IBOutlet weak var tableView: UITableView!
     
     var options: Dictionary<String, Int>!
+    var selections: [Bool]!
 
     override func viewDidLoad() {
         super.viewDidLoad()
         
         title = "Pick a filter"
+        selections = [Bool](repeating: false, count: options.count)
+        
         tableView.delegate = self
         tableView.dataSource = self
     }
@@ -26,7 +29,11 @@ class FilterVC: UIViewController, UITableViewDelegate, UITableViewDataSource {
         if let cell = tableView.dequeueReusableCell(withIdentifier: "WineFilterCell") as? WineFilterCell {
             // the below should be within WineFilterCell class
             cell.textLabel?.text = Array(options.keys).sorted()[indexPath.row]
-            cell.accessoryType = cell.isSelected ? .checkmark : .none
+            if selections[indexPath.row] {
+                cell.accessoryType = .checkmark
+            } else {
+                cell.accessoryType = .none
+            }
             return cell
         }
         return UITableViewCell()
@@ -37,10 +44,12 @@ class FilterVC: UIViewController, UITableViewDelegate, UITableViewDataSource {
     }
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        selections[indexPath.row] = true
         tableView.cellForRow(at: indexPath)?.accessoryType = .checkmark
     }
     
     func tableView(_ tableView: UITableView, didDeselectRowAt indexPath: IndexPath) {
+        selections[indexPath.row] = false
         tableView.cellForRow(at: indexPath)?.accessoryType = .none
     }
 
