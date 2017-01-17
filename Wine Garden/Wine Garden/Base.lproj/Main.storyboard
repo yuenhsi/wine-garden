@@ -22,19 +22,19 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="grouped" separatorStyle="default" rowHeight="44" sectionHeaderHeight="18" sectionFooterHeight="18" translatesAutoresizingMaskIntoConstraints="NO" id="9mh-6F-nlR">
-                                <rect key="frame" x="0.0" y="20" width="375" height="647"/>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="grouped" separatorStyle="default" allowsMultipleSelection="YES" rowHeight="44" sectionHeaderHeight="18" sectionFooterHeight="18" translatesAutoresizingMaskIntoConstraints="NO" id="9mh-6F-nlR">
+                                <rect key="frame" x="0.0" y="64" width="375" height="603"/>
                                 <color key="backgroundColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
                                 <prototypes>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" accessoryType="checkmark" indentationWidth="10" reuseIdentifier="WineFilterCell" textLabel="Wrb-qP-xaB" style="IBUITableViewCellStyleDefault" id="Ylh-o6-BHY">
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="none" indentationWidth="10" reuseIdentifier="WineFilterCell" textLabel="2od-yn-J2Y" style="IBUITableViewCellStyleDefault" id="Ylh-o6-BHY" customClass="WineFilterCell" customModule="Wine_Garden" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="56" width="375" height="44"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="Ylh-o6-BHY" id="bh1-4h-B90">
-                                            <rect key="frame" x="0.0" y="0.0" width="336" height="43"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="375" height="43"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
-                                                <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" text="Title" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="Wrb-qP-xaB">
-                                                    <rect key="frame" x="15" y="0.0" width="321" height="43"/>
+                                                <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" text="Title" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="2od-yn-J2Y">
+                                                    <rect key="frame" x="15" y="0.0" width="345" height="43"/>
                                                     <autoresizingMask key="autoresizingMask"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                     <nil key="textColor"/>
@@ -48,10 +48,10 @@
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
-                            <constraint firstAttribute="trailing" secondItem="9mh-6F-nlR" secondAttribute="trailing" id="CU9-aI-988"/>
-                            <constraint firstItem="oWs-BK-xoK" firstAttribute="top" secondItem="9mh-6F-nlR" secondAttribute="bottom" id="aVT-S4-l2n"/>
-                            <constraint firstItem="9mh-6F-nlR" firstAttribute="top" secondItem="Slj-yn-6hR" secondAttribute="bottom" id="ag0-CR-nzm"/>
-                            <constraint firstItem="9mh-6F-nlR" firstAttribute="leading" secondItem="xtm-de-GPD" secondAttribute="leading" id="sZk-uN-TUa"/>
+                            <constraint firstItem="9mh-6F-nlR" firstAttribute="top" secondItem="Slj-yn-6hR" secondAttribute="bottom" id="0eA-oE-r4d"/>
+                            <constraint firstItem="9mh-6F-nlR" firstAttribute="leading" secondItem="xtm-de-GPD" secondAttribute="leading" id="BKF-s3-5uQ"/>
+                            <constraint firstItem="oWs-BK-xoK" firstAttribute="top" secondItem="9mh-6F-nlR" secondAttribute="bottom" id="Ptm-yB-apl"/>
+                            <constraint firstAttribute="trailing" secondItem="9mh-6F-nlR" secondAttribute="trailing" id="Rk4-zK-T2M"/>
                         </constraints>
                     </view>
                     <connections>
@@ -293,7 +293,7 @@
                     <navigationItem key="navigationItem" id="dJn-4f-EDh"/>
                     <connections>
                         <segue destination="BYZ-38-t0r" kind="show" identifier="DetailVC" id="ufS-2I-yNO"/>
-                        <segue destination="phl-tG-xM9" kind="showDetail" identifier="FilterVC" id="Hhk-f6-1ul"/>
+                        <segue destination="phl-tG-xM9" kind="show" identifier="FilterVC" id="Hhk-f6-1ul"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Jqc-7a-zbo" userLabel="First Responder" sceneMemberID="firstResponder"/>
