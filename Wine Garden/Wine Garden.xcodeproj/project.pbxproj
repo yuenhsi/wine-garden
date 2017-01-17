@@ -391,6 +391,7 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = D1F2B4EFC5D712F8643DBA0C /* Pods-Wine Garden.debug.xcconfig */;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				DEVELOPMENT_TEAM = "";
 				INFOPLIST_FILE = "Wine Garden/Info.plist";
@@ -405,6 +406,7 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = DD415E96B7645D68B31C361A /* Pods-Wine Garden.release.xcconfig */;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				DEVELOPMENT_TEAM = "";
 				INFOPLIST_FILE = "Wine Garden/Info.plist";
