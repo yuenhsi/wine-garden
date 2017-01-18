@@ -62,19 +62,18 @@ class MainVC: UIViewController {
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         
-        if segue.identifier == "DetailVC" {
-            if let segueVC = segue.destination as? DetailVC {
-                if let filterIDs = sender as? [Int] {
-                    segueVC.filters = filterIDs
-                }
-            }
-        }
-        else if segue.identifier == "FilterVC" {
+        if segue.identifier == "FilterVC" {
             if let segueVC = segue.destination as? FilterVC {
                 if let filterItems = sender as? FilterVCItems {
                     segueVC.options = filterItems.options
                     segueVC.navTitle = filterItems.title
                     segueVC.selectedIDs = filterItems.selectedIDs
+                }
+            }
+        } else if segue.identifier == "DetailVC" {
+            if let segueVC = segue.destination as? DetailVC {
+                if let filterIDs = sender as? [Int] {
+                    segueVC.filters = filterIDs
                 }
             }
         }
