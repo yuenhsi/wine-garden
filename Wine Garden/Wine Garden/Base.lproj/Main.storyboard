@@ -67,6 +67,9 @@
                                                 <rect key="frame" x="0.0" y="0.0" width="185" height="70"/>
                                                 <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
                                                 <state key="normal" title="Select"/>
+                                                <connections>
+                                                    <action selector="selectBtnPressed:" destination="phl-tG-xM9" eventType="touchUpInside" id="kxn-7k-U1n"/>
+                                                </connections>
                                             </button>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="yII-p2-nkS">
                                                 <rect key="frame" x="190" y="0.0" width="185" height="70"/>

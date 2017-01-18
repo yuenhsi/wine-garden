@@ -37,6 +37,23 @@ class FilterVC: UIViewController, UITableViewDelegate, UITableViewDataSource {
         return ids
     }
     
+    @IBAction func selectBtnPressed(_ sender: Any) {
+        
+    }
+    
+    @IBAction func clearBtnPressed(_ sender: Any) {
+        for (index, selection) in selections.enumerated() {
+            if selection {
+                selections[index] = false
+            }
+        }
+        tableView.reloadData()
+    }
+    
+    @IBAction func cancelBtnPressed(_ sender: Any) {
+        dismiss(animated: true)
+    }
+    
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         if let cell = tableView.dequeueReusableCell(withIdentifier: "WineFilterCell") as? WineFilterCell {
             // the below should be within WineFilterCell class
@@ -63,10 +80,6 @@ class FilterVC: UIViewController, UITableViewDelegate, UITableViewDataSource {
     func tableView(_ tableView: UITableView, didDeselectRowAt indexPath: IndexPath) {
         selections[indexPath.row] = false
         tableView.cellForRow(at: indexPath)?.accessoryType = .none
-    }
-
-    @IBAction func cancelBtnPressed(_ sender: Any) {
-        dismiss(animated: true)
     }
     
 }
