@@ -24,7 +24,7 @@ class MainVC: UIViewController {
         super.viewDidLoad()
         // populate regions / types / varietals / tastes
         setup {
-            self.updateUI()
+            
         }
     }
     
@@ -145,14 +145,7 @@ class MainVC: UIViewController {
             completed()
         }
     }
-    
-    func updateUI() {
-        print(self.types)
-        print(self.varietals)
-        print(self.tastes)
-        print(self.regions)
-        // reloadData
-    }
+
 }
 
 
