@@ -20,8 +20,6 @@ class MainVC: UIViewController {
     var regions: Dictionary<String, Int> = [:]
     var selectedRegionIDs = [Int]()
     
-    var filterIDs = [Int]()
-    
     override func viewDidLoad() {
         super.viewDidLoad()
         // populate regions / types / varietals / tastes
@@ -47,8 +45,8 @@ class MainVC: UIViewController {
     }
     
     @IBAction func applyFilter(_ sender: Any) {
-        
-        filterIDs = [490, 124, 143]
+        // 490 limits results to wine only
+        let filterIDs =  selectedTypeIDs + selectedVarietalIDs + selectedTasteIDs + selectedRegionIDs + [490]
         performSegue(withIdentifier: "DetailVC", sender: filterIDs)
     }
     

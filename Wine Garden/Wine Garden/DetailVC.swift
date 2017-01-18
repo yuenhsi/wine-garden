@@ -33,7 +33,8 @@ class DetailVC: UIViewController, UITableViewDelegate, UITableViewDataSource
             }
             
         }
-        catalogUrl = "\(baseUrl)\(catalogExt)\(categories)&size=10&apikey=\(apikey)"
+        catalogUrl = "\(baseUrl)\(catalogExt)(\(categories))&size=10&apikey=\(apikey)"
+        print(catalogUrl)
         setup {
             self.updateUI()
         }
@@ -72,31 +73,26 @@ class DetailVC: UIViewController, UITableViewDelegate, UITableViewDataSource
                             if let id = list["Id"] as? Int 
                             {
                                 newWine.id = id
-                                print("ID is \(id)")
                             }
                             if let name = list["Name"] as? String
                             {
                                 newWine.name = name
-                                print("Name is \(name)")
                             }
                             if let vintage = list["Vintage"] as? String
                             {
                                 newWine.vintage = vintage
-                                print("Vintage is \(vintage)")
                             }
                             if let appelation = list["Appellation"] as? Dictionary<String, Any>
                             {
                                 if let appelationName = appelation["Name"] as? String
                                 {
                                     newWine.appellation = appelationName
-                                    print("App Name is \(appelationName)")
                                 }
                                 if let region = appelation["Region"] as? Dictionary<String, Any>
                                 {
                                     if let regionName = region["Name"] as? String
                                     {
                                         newWine.region = regionName
-                                        print("regionName is \(regionName)")
                                     }
                                 }
                             }
@@ -105,7 +101,6 @@ class DetailVC: UIViewController, UITableViewDelegate, UITableViewDataSource
                                 if let varietalName = varietal["Name"] as? String
                                 {
                                     newWine.varietal = varietalName
-                                    print("varietalName is \(varietalName)")
                                 }
                             }
                             if let label = list["Labels"] as? [Dictionary<String, String>], label.count > 0
@@ -113,7 +108,6 @@ class DetailVC: UIViewController, UITableViewDelegate, UITableViewDataSource
                                 if let thumbnail = label[0]["Url"]
                                 {
                                     newWine.labelImageUrl = thumbnail
-                                    print("thumbnail url is \(thumbnail)")
                                 }
                             }
                             self.wines.append(newWine)
