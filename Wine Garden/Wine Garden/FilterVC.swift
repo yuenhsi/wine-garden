@@ -13,6 +13,9 @@ class FilterVC: UIViewController, UITableViewDelegate, UITableViewDataSource {
     @IBOutlet weak var tableView: UITableView!
     
     var options: Dictionary<String, Int>!
+    var navTitle: String!
+    var selectedIDs: [Int]!
+    
     var keys: [String]!
     var selections: [Bool]!
 

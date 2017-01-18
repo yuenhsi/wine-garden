@@ -12,7 +12,7 @@ import Alamofire
 class MainVC: UIViewController {
     
     var types: Dictionary<String, Int> = [:]
-    var seletedTypeIDs = [Int]()
+    var selectedTypeIDs = [Int]()
     var varietals: Dictionary<String, Int> = [:]
     var selectedVarietalIDs = [Int]()
     var tastes: Dictionary<String, Int> = [:]
@@ -31,7 +31,7 @@ class MainVC: UIViewController {
     }
     
     @IBAction func filterOneBtnPressed(_ sender: Any) {
-        performSegue(withIdentifier: "FilterVC", sender: types)
+        performSegue(withIdentifier: "FilterVC", sender: (types, "Types", selectedTypeIDs) as FilterVCItems)
     }
     
     @IBAction func filterTwoBtnPressed(_ sender: Any) {
@@ -71,8 +71,10 @@ class MainVC: UIViewController {
         }
         else if segue.identifier == "FilterVC" {
             if let segueVC = segue.destination as? FilterVC {
-                if let filterOptions = sender as? Dictionary<String, Int> {
-                    segueVC.options = filterOptions
+                if let filterItems = sender as? FilterVCItems {
+                    segueVC.options = filterItems.options
+                    segueVC.navTitle = filterItems.title
+                    segueVC.selectedIDs = filterItems.selectedIDs
                 }
             }
         }
