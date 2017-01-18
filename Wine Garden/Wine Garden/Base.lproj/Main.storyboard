@@ -69,6 +69,7 @@
                                                 <state key="normal" title="Select"/>
                                                 <connections>
                                                     <action selector="selectBtnPressed:" destination="phl-tG-xM9" eventType="touchUpInside" id="kxn-7k-U1n"/>
+                                                    <segue destination="3f1-yu-UIj" kind="unwind" unwindAction="unwindToThisViewWithSender:" id="Kax-Vz-VjO"/>
                                                 </connections>
                                             </button>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="yII-p2-nkS">
@@ -111,6 +112,7 @@
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Geg-BB-Pwn" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <exit id="3f1-yu-UIj" userLabel="Exit" sceneMemberID="exit"/>
             </objects>
             <point key="canvasLocation" x="1404" y="13.943028485757123"/>
         </scene>

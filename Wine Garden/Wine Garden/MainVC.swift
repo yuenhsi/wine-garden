@@ -12,9 +12,13 @@ import Alamofire
 class MainVC: UIViewController {
     
     var types: Dictionary<String, Int> = [:]
+    var seletedTypeIDs = [Int]()
     var varietals: Dictionary<String, Int> = [:]
+    var selectedVarietalIDs = [Int]()
     var tastes: Dictionary<String, Int> = [:]
+    var selectedTasteIDs = [Int]()
     var regions: Dictionary<String, Int> = [:]
+    var selectedRegionIDs = [Int]()
     
     var filterIDs = [Int]()
     
@@ -46,6 +50,14 @@ class MainVC: UIViewController {
         
         filterIDs = [490, 124, 143]
         performSegue(withIdentifier: "DetailVC", sender: filterIDs)
+    }
+    
+    @IBAction func unwindToThisView(sender: UIStoryboardSegue) {
+        print("Called")
+        if let segueVC = sender.source as? FilterVC {
+            let ids = segueVC.getSelectedIDs()
+            print(ids)
+        }
     }
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
