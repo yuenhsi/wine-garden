@@ -53,10 +53,19 @@ class MainVC: UIViewController {
     }
     
     @IBAction func unwindToThisView(sender: UIStoryboardSegue) {
-        print("Called")
         if let segueVC = sender.source as? FilterVC {
-            let ids = segueVC.getSelectedIDs()
-            print(ids)
+            switch segueVC.navTitle {
+                case "Types":
+                selectedTypeIDs = segueVC.selectedIDs
+                case "Varietals":
+                selectedVarietalIDs = segueVC.selectedIDs
+                case "Tastes":
+                    selectedTasteIDs = segueVC.selectedIDs
+                case "Regions":
+                    selectedRegionIDs = segueVC.selectedIDs
+                default:
+                    print("Switch case on navTitle defaulted!")
+            }
         }
     }
     
