@@ -65,4 +65,8 @@ class FilterVC: UIViewController, UITableViewDelegate, UITableViewDataSource {
         tableView.cellForRow(at: indexPath)?.accessoryType = .none
     }
 
+    @IBAction func cancelBtnPressed(_ sender: Any) {
+        dismiss(animated: true)
+    }
+    
 }
