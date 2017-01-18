@@ -15,30 +15,17 @@ class FilterVC: UIViewController, UITableViewDelegate, UITableViewDataSource {
     var options: Dictionary<String, Int>!
     var navTitle: String!
     var selectedIDs: [Int]!
-    
     var keys: [String]! // actual ordering of the table
-//    var selections: [Bool]!
+
 
     override func viewDidLoad() {
         super.viewDidLoad()
         
         title = navTitle.capitalized
         keys = Array(options.keys).sorted()
-//        selections = [Bool](repeating: false, count: options.count)
         
         tableView.delegate = self
         tableView.dataSource = self
-    }
-    
-    func getSelectedIDs() -> [Int] {
-//        var ids = [Int]()
-//        for (index, selection) in selections.enumerated() {
-//            if selection {
-//                ids.append(options[keys[index]]!)
-//            }
-//        }
-//        return ids
-        return selectedIDs
     }
     
     @IBAction func selectBtnPressed(_ sender: Any) {
@@ -46,11 +33,6 @@ class FilterVC: UIViewController, UITableViewDelegate, UITableViewDataSource {
     }
     
     @IBAction func clearBtnPressed(_ sender: Any) {
-//        for (index, selection) in selections.enumerated() {
-//            if selection {
-//                selections[index] = false
-//            }
-//        }
         selectedIDs.removeAll()
         tableView.reloadData()
     }
@@ -68,11 +50,6 @@ class FilterVC: UIViewController, UITableViewDelegate, UITableViewDataSource {
             } else {
                 cell.accessoryType = .none
             }
-//            if selections[indexPath.row] {
-//                cell.accessoryType = .checkmark
-//            } else {
-//                cell.accessoryType = .none
-//            }
             return cell
         }
         return UITableViewCell()
@@ -83,7 +60,6 @@ class FilterVC: UIViewController, UITableViewDelegate, UITableViewDataSource {
     }
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-//        selections[indexPath.row] = true
         let id = options[keys[indexPath.row]]!
         if !selectedIDs.contains(id) {
             selectedIDs.append(id)
@@ -92,7 +68,6 @@ class FilterVC: UIViewController, UITableViewDelegate, UITableViewDataSource {
     }
     
     func tableView(_ tableView: UITableView, didDeselectRowAt indexPath: IndexPath) {
-//        selections[indexPath.row] = false
         let id = options[keys[indexPath.row]]!
         if let index = selectedIDs.index(of: id) {
             selectedIDs.remove(at: index)
