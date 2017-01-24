@@ -22,6 +22,7 @@ class MainVC: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
         // populate regions / types / varietals / tastes
         setup {
             
@@ -29,7 +30,7 @@ class MainVC: UIViewController {
     }
     
     @IBAction func filterOneBtnPressed(_ sender: Any) {
-        performSegue(withIdentifier: "FilterVC", sender: (types, "Types", selectedTypeIDs) as FilterVCItems)
+        performSegue(withIdentifier: "FilterVC", sender: (regions, "Regions", selectedRegionIDs) as FilterVCItems)
     }
     
     @IBAction func filterTwoBtnPressed(_ sender: Any) {
@@ -41,7 +42,7 @@ class MainVC: UIViewController {
     }
     
     @IBAction func filterFourBtnPressed(_ sender: Any) {
-        performSegue(withIdentifier: "FilterVC", sender: (regions, "Regions", selectedRegionIDs) as FilterVCItems)
+        performSegue(withIdentifier: "FilterVC", sender: (types, "Types", selectedTypeIDs) as FilterVCItems)
     }
     
     @IBAction func applyFilter(_ sender: Any) {
