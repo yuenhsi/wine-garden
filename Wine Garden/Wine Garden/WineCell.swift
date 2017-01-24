@@ -21,7 +21,6 @@ class WineCell: UITableViewCell {
     func configureCell(wine: Wine) {
         
         nameLbl.text = wine.name
-        vintageLbl.text = wine.vintage ?? ""
         varietalLbl.text = wine.varietal ?? ""
         appelationLbl.text = wine.appellation ?? ""
         regionLbl.text = wine.region ?? ""

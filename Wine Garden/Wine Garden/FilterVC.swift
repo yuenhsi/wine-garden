@@ -11,6 +11,7 @@ import UIKit
 class FilterVC: UIViewController, UITableViewDelegate, UITableViewDataSource {
     
     @IBOutlet weak var tableView: UITableView!
+    @IBOutlet weak var navBarTitle: UINavigationItem!
     
     var options: Dictionary<String, Int>!
     var navTitle: String!
@@ -21,7 +22,8 @@ class FilterVC: UIViewController, UITableViewDelegate, UITableViewDataSource {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        title = navTitle.capitalized
+        navBarTitle.title = navTitle.capitalized
+
         keys = Array(options.keys).sorted()
         
         tableView.delegate = self
