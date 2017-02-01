@@ -34,15 +34,16 @@ class MainVC: UIViewController {
     }
     
     @IBAction func filterTwoBtnPressed(_ sender: Any) {
-        performSegue(withIdentifier: "FilterVC", sender: (varietals, "Varietals", selectedVarietalIDs) as FilterVCItems)
+        performSegue(withIdentifier: "FilterVC", sender: (types, "Types", selectedTypeIDs) as FilterVCItems)
     }
     
     @IBAction func filterThreeBtnPressed(_ sender: Any) {
-        performSegue(withIdentifier: "FilterVC", sender: (tastes, "Tastes", selectedTasteIDs) as FilterVCItems)
+        performSegue(withIdentifier: "FilterVC", sender: (varietals, "Varietals", selectedVarietalIDs) as FilterVCItems)
     }
     
     @IBAction func filterFourBtnPressed(_ sender: Any) {
-        performSegue(withIdentifier: "FilterVC", sender: (types, "Types", selectedTypeIDs) as FilterVCItems)
+        performSegue(withIdentifier: "FilterVC", sender: (tastes, "Tastes", selectedTasteIDs) as FilterVCItems)
+        
     }
     
     @IBAction func applyFilter(_ sender: Any) {
