@@ -1,6 +1,6 @@
-<?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11762" systemVersion="15G31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="TlK-oB-bkZ">
-    <device id="retina4_7" orientation="portrait">
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11762" systemVersion="16D32" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="TlK-oB-bkZ">
+    <device id="ipad12_9" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
@@ -20,22 +20,22 @@
                         <viewControllerLayoutGuide type="bottom" id="oWs-BK-xoK"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="xtm-de-GPD">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <rect key="frame" x="0.0" y="0.0" width="1024" height="1366"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="grouped" separatorStyle="default" allowsMultipleSelection="YES" rowHeight="44" sectionHeaderHeight="18" sectionFooterHeight="18" translatesAutoresizingMaskIntoConstraints="NO" id="9mh-6F-nlR">
-                                <rect key="frame" x="0.0" y="64" width="375" height="533"/>
+                                <rect key="frame" x="0.0" y="64" width="1024" height="1232"/>
                                 <color key="backgroundColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
                                 <prototypes>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="none" indentationWidth="10" reuseIdentifier="WineFilterCell" textLabel="2od-yn-J2Y" style="IBUITableViewCellStyleDefault" id="Ylh-o6-BHY" customClass="WineFilterCell" customModule="Wine_Garden" customModuleProvider="target">
-                                        <rect key="frame" x="0.0" y="55.5" width="375" height="44"/>
+                                        <rect key="frame" x="0.0" y="55.5" width="1024" height="44"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="Ylh-o6-BHY" id="bh1-4h-B90">
-                                            <rect key="frame" x="0.0" y="0.0" width="375" height="43"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="1024" height="43.5"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" text="Title" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="2od-yn-J2Y">
-                                                    <rect key="frame" x="15" y="0.0" width="345" height="43"/>
+                                                    <rect key="frame" x="176" y="0.0" width="672" height="43.5"/>
                                                     <autoresizingMask key="autoresizingMask"/>
                                                     <fontDescription key="fontDescription" name="AvenirNext-Medium" family="Avenir Next" pointSize="17"/>
                                                     <color key="textColor" red="0.27058823529999998" green="0.054901960780000002" blue="0.054901960780000002" alpha="1" colorSpace="calibratedRGB"/>
@@ -49,7 +49,7 @@
                                 </prototypes>
                             </tableView>
                             <navigationBar contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="gMH-Zp-seJ">
-                                <rect key="frame" x="0.0" y="20" width="375" height="44"/>
+                                <rect key="frame" x="0.0" y="20" width="1024" height="44"/>
                                 <textAttributes key="titleTextAttributes">
                                     <color key="textColor" red="0.27058823529999998" green="0.054901960780000002" blue="0.054901960780000002" alpha="1" colorSpace="calibratedRGB"/>
                                 </textAttributes>
@@ -65,13 +65,13 @@
                                 </items>
                             </navigationBar>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Gah-Ym-J7k">
-                                <rect key="frame" x="0.0" y="597" width="375" height="70"/>
+                                <rect key="frame" x="0.0" y="1296" width="1024" height="70"/>
                                 <subviews>
                                     <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="5" translatesAutoresizingMaskIntoConstraints="NO" id="SMg-jg-5W6">
-                                        <rect key="frame" x="5" y="0.0" width="365" height="65"/>
+                                        <rect key="frame" x="5" y="0.0" width="1014" height="65"/>
                                         <subviews>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="4YX-uM-a9P" customClass="CustomButton" customModule="Wine_Garden" customModuleProvider="target">
-                                                <rect key="frame" x="0.0" y="0.0" width="180" height="65"/>
+                                                <rect key="frame" x="0.0" y="0.0" width="504.5" height="65"/>
                                                 <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                                 <fontDescription key="fontDescription" name="AvenirNext-DemiBold" family="Avenir Next" pointSize="17"/>
                                                 <state key="normal" title="SELECT">
@@ -83,7 +83,7 @@
                                                 </connections>
                                             </button>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="yII-p2-nkS" customClass="CustomButton" customModule="Wine_Garden" customModuleProvider="target">
-                                                <rect key="frame" x="185" y="0.0" width="180" height="65"/>
+                                                <rect key="frame" x="509.5" y="0.0" width="504.5" height="65"/>
                                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                                 <fontDescription key="fontDescription" name="AvenirNext-DemiBold" family="Avenir Next" pointSize="17"/>
                                                 <state key="normal" title="CLEAR">
@@ -139,23 +139,23 @@
                         <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="Ejm-YS-eAb">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <rect key="frame" x="0.0" y="0.0" width="1024" height="1366"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="101" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="tx2-qe-BWq">
-                                <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                                <rect key="frame" x="0.0" y="0.0" width="1024" height="1366"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <inset key="separatorInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
                                 <prototypes>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="0.0" shouldIndentWhileEditing="NO" reuseIdentifier="WineCell" rowHeight="108" id="yIl-br-dp4" customClass="WineCell" customModule="Wine_Garden" customModuleProvider="target">
-                                        <rect key="frame" x="0.0" y="28" width="375" height="108"/>
+                                        <rect key="frame" x="0.0" y="28" width="1024" height="108"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="yIl-br-dp4" id="ku6-cp-OLD">
-                                            <rect key="frame" x="0.0" y="0.0" width="375" height="108"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="1024" height="107.5"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="RKb-7i-etQ">
-                                                    <rect key="frame" x="8" y="8" width="359" height="91.5"/>
+                                                    <rect key="frame" x="8" y="8" width="1008" height="91.5"/>
                                                     <subviews>
                                                         <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="tmp" translatesAutoresizingMaskIntoConstraints="NO" id="RrA-my-xlz">
                                                             <rect key="frame" x="0.0" y="0.0" width="92" height="91.5"/>
@@ -165,13 +165,13 @@
                                                             </constraints>
                                                         </imageView>
                                                         <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" alignment="top" translatesAutoresizingMaskIntoConstraints="NO" id="Xah-oU-WqK">
-                                                            <rect key="frame" x="100" y="0.0" width="259" height="91.5"/>
+                                                            <rect key="frame" x="100" y="0.0" width="908" height="91.5"/>
                                                             <subviews>
                                                                 <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" translatesAutoresizingMaskIntoConstraints="NO" id="SAq-7m-pDt">
-                                                                    <rect key="frame" x="0.0" y="0.0" width="259" height="30.5"/>
+                                                                    <rect key="frame" x="0.0" y="0.0" width="908" height="30.5"/>
                                                                     <subviews>
                                                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="NAME" textAlignment="natural" lineBreakMode="wordWrap" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="x9e-bm-7dl">
-                                                                            <rect key="frame" x="0.0" y="0.0" width="259" height="30.5"/>
+                                                                            <rect key="frame" x="0.0" y="0.0" width="908" height="30.5"/>
                                                                             <fontDescription key="fontDescription" name="AvenirNext-DemiBold" family="Avenir Next" pointSize="17"/>
                                                                             <color key="textColor" red="0.27058823529999998" green="0.054901960780000002" blue="0.054901960780000002" alpha="1" colorSpace="calibratedRGB"/>
                                                                             <nil key="highlightedColor"/>
@@ -179,10 +179,10 @@
                                                                     </subviews>
                                                                 </stackView>
                                                                 <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" translatesAutoresizingMaskIntoConstraints="NO" id="PZC-AZ-0sU">
-                                                                    <rect key="frame" x="0.0" y="30.5" width="259" height="30.5"/>
+                                                                    <rect key="frame" x="0.0" y="30.5" width="908" height="30.5"/>
                                                                     <subviews>
                                                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="VARIETAL" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="3j2-Ls-mal">
-                                                                            <rect key="frame" x="0.0" y="0.0" width="259" height="30.5"/>
+                                                                            <rect key="frame" x="0.0" y="0.0" width="908" height="30.5"/>
                                                                             <fontDescription key="fontDescription" name="AvenirNext-Italic" family="Avenir Next" pointSize="17"/>
                                                                             <color key="textColor" red="0.27058823529999998" green="0.054901960780000002" blue="0.054901960780000002" alpha="1" colorSpace="calibratedRGB"/>
                                                                             <nil key="highlightedColor"/>
@@ -190,16 +190,16 @@
                                                                     </subviews>
                                                                 </stackView>
                                                                 <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" translatesAutoresizingMaskIntoConstraints="NO" id="QfA-dc-0rO">
-                                                                    <rect key="frame" x="0.0" y="61" width="259" height="30.5"/>
+                                                                    <rect key="frame" x="0.0" y="61" width="908" height="30.5"/>
                                                                     <subviews>
                                                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="REGION" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="8RJ-j8-g5T">
-                                                                            <rect key="frame" x="0.0" y="0.0" width="129.5" height="30.5"/>
+                                                                            <rect key="frame" x="0.0" y="0.0" width="454" height="30.5"/>
                                                                             <fontDescription key="fontDescription" name="AvenirNext-Regular" family="Avenir Next" pointSize="17"/>
                                                                             <color key="textColor" red="0.27058823529999998" green="0.054901960780000002" blue="0.054901960780000002" alpha="1" colorSpace="calibratedRGB"/>
                                                                             <nil key="highlightedColor"/>
                                                                         </label>
                                                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="APPELLATION" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Zj8-rl-vp4">
-                                                                            <rect key="frame" x="129.5" y="0.0" width="129.5" height="30.5"/>
+                                                                            <rect key="frame" x="454" y="0.0" width="454" height="30.5"/>
                                                                             <fontDescription key="fontDescription" name="AvenirNext-Regular" family="Avenir Next" pointSize="17"/>
                                                                             <color key="textColor" red="0.27058823529999998" green="0.054901960780000002" blue="0.054901960780000002" alpha="1" colorSpace="calibratedRGB"/>
                                                                             <nil key="highlightedColor"/>
@@ -275,26 +275,27 @@
                         <viewControllerLayoutGuide type="bottom" id="jdE-kZ-U4R"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="hTX-1O-skk">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <rect key="frame" x="0.0" y="0.0" width="1024" height="1366"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="bottles" translatesAutoresizingMaskIntoConstraints="NO" id="eRN-ej-0CI">
-                                <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                                <rect key="frame" x="0.0" y="0.0" width="1024" height="1366"/>
                             </imageView>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="cht-os-bOE">
-                                <rect key="frame" x="0.0" y="80.5" width="375" height="507"/>
+                                <rect key="frame" x="0.0" y="81" width="1024" height="1204"/>
                                 <subviews>
                                     <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Logo2" translatesAutoresizingMaskIntoConstraints="NO" id="7cb-ZW-o0h">
-                                        <rect key="frame" x="131" y="0.0" width="113" height="58"/>
+                                        <rect key="frame" x="455.5" y="0.0" width="113" height="58"/>
                                         <constraints>
                                             <constraint firstAttribute="height" relation="lessThanOrEqual" constant="58" id="21s-MH-b5s"/>
                                             <constraint firstAttribute="width" secondItem="7cb-ZW-o0h" secondAttribute="height" multiplier="113:58" id="YUI-Cf-1we"/>
+                                            <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="20" id="kHk-2n-LEe"/>
                                         </constraints>
                                     </imageView>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="252" usesAttributedText="YES" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ExC-E1-rjj" userLabel="Select multiple filters from our">
-                                        <rect key="frame" x="10" y="66" width="355" height="50"/>
+                                        <rect key="frame" x="10" y="66" width="1004" height="83"/>
                                         <constraints>
-                                            <constraint firstAttribute="height" constant="50" id="nx6-ug-dlo"/>
+                                            <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="50" id="nx6-ug-dlo"/>
                                         </constraints>
                                         <attributedString key="attributedText">
                                             <fragment content="Select multiple filters from our database and find your perfect match">
@@ -308,10 +309,10 @@
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="11" translatesAutoresizingMaskIntoConstraints="NO" id="den-f9-nKt">
-                                        <rect key="frame" x="12.5" y="124" width="350" height="383"/>
+                                        <rect key="frame" x="5" y="157" width="1014" height="1047"/>
                                         <subviews>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="UkE-lm-Ov9" customClass="CustomButton" customModule="Wine_Garden" customModuleProvider="target">
-                                                <rect key="frame" x="0.0" y="0.0" width="350" height="87.5"/>
+                                                <rect key="frame" x="0.0" y="0.0" width="1014" height="253.5"/>
                                                 <color key="backgroundColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
                                                 <constraints>
                                                     <constraint firstAttribute="width" secondItem="UkE-lm-Ov9" secondAttribute="height" multiplier="4:1" id="9am-Fs-akk"/>
@@ -324,7 +325,7 @@
                                                 </connections>
                                             </button>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="EgJ-cw-s7m" customClass="CustomButton" customModule="Wine_Garden" customModuleProvider="target">
-                                                <rect key="frame" x="0.0" y="98.5" width="350" height="87.5"/>
+                                                <rect key="frame" x="0.0" y="264.5" width="1014" height="253.5"/>
                                                 <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
                                                 <constraints>
                                                     <constraint firstAttribute="width" secondItem="EgJ-cw-s7m" secondAttribute="height" multiplier="4:1" id="96H-Uw-1ep"/>
@@ -335,7 +336,7 @@
                                                 </connections>
                                             </button>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="0Zw-HG-OVG" customClass="CustomButton" customModule="Wine_Garden" customModuleProvider="target">
-                                                <rect key="frame" x="0.0" y="197" width="350" height="87.5"/>
+                                                <rect key="frame" x="0.0" y="529" width="1014" height="253.5"/>
                                                 <color key="backgroundColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
                                                 <constraints>
                                                     <constraint firstAttribute="width" secondItem="0Zw-HG-OVG" secondAttribute="height" multiplier="4:1" id="crF-OF-ALp"/>
@@ -346,7 +347,7 @@
                                                 </connections>
                                             </button>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="19U-FW-Bwq" customClass="CustomButton" customModule="Wine_Garden" customModuleProvider="target">
-                                                <rect key="frame" x="0.0" y="295.5" width="350" height="87.5"/>
+                                                <rect key="frame" x="0.0" y="793.5" width="1014" height="253.5"/>
                                                 <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
                                                 <constraints>
                                                     <constraint firstAttribute="width" secondItem="19U-FW-Bwq" secondAttribute="height" multiplier="4:1" id="DSP-oc-aQf"/>
@@ -367,7 +368,7 @@
                                 </constraints>
                             </stackView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" hasAttributedTitle="YES" translatesAutoresizingMaskIntoConstraints="NO" id="8QF-aE-7LD">
-                                <rect key="frame" x="97" y="612.5" width="182" height="39.5"/>
+                                <rect key="frame" x="421.5" y="1310" width="182" height="41"/>
                                 <constraints>
                                     <constraint firstAttribute="height" relation="lessThanOrEqual" constant="41" id="2f3-H3-M6y"/>
                                     <constraint firstAttribute="width" constant="182" id="JiG-p2-iXb"/>
