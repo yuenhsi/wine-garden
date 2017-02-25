@@ -22,6 +22,8 @@ class DetailVC: UIViewController, UITableViewDelegate, UITableViewDataSource
         super.viewDidLoad()
         tableView.dataSource = self
         tableView.delegate = self
+        navigationController?.navigationBar.tintColor = UIColor(red:0.27, green:0.05, blue:0.05, alpha: 1.0)
+        
         var categories = ""
 
         for (index,filter) in filters.enumerated()
