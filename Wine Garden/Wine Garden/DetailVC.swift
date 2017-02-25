@@ -57,6 +57,14 @@ class DetailVC: UIViewController, UITableViewDelegate, UITableViewDataSource
         }
     }
     
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath)
+    {
+        let wine = wines[indexPath.row]
+        if let _ = wine.url {
+            
+        }
+    }
+    
     // populate table view with wines
     func setup(completed: @escaping DownloadComplete)
     {
@@ -79,6 +87,10 @@ class DetailVC: UIViewController, UITableViewDelegate, UITableViewDataSource
                             if let name = list["Name"] as? String
                             {
                                 newWine.name = name
+                            }
+                            if let url = list["Url"] as? String
+                            {
+                                newWine.url = url
                             }
                             if let vintage = list["Vintage"] as? String
                             {

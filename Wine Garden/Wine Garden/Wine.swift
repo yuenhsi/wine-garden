@@ -19,6 +19,8 @@ class Wine {
     var varietal: String?
     var labelImageUrl: String?
     
+    var url: String?
+    
     // currently not being populated
     var type: String?
     var style: String?
