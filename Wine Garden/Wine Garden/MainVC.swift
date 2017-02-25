@@ -19,31 +19,39 @@ class MainVC: UIViewController {
     var selectedTasteIDs = [Int]()
     var regions: Dictionary<String, Int> = [:]
     var selectedRegionIDs = [Int]()
+    var dataLoaded = false
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
         // populate regions / types / varietals / tastes
         setup {
-            
+            self.dataLoaded = true
         }
     }
     
     @IBAction func filterOneBtnPressed(_ sender: Any) {
-        performSegue(withIdentifier: "FilterVC", sender: (regions, "Regions", selectedRegionIDs) as FilterVCItems)
+        if (dataLoaded) {
+            performSegue(withIdentifier: "FilterVC", sender: (regions, "Regions", selectedRegionIDs) as FilterVCItems)
+        }
     }
     
     @IBAction func filterTwoBtnPressed(_ sender: Any) {
-        performSegue(withIdentifier: "FilterVC", sender: (types, "Types", selectedTypeIDs) as FilterVCItems)
+        if (dataLoaded) {
+            performSegue(withIdentifier: "FilterVC", sender: (types, "Types", selectedTypeIDs) as FilterVCItems)
+        }
     }
     
     @IBAction func filterThreeBtnPressed(_ sender: Any) {
-        performSegue(withIdentifier: "FilterVC", sender: (varietals, "Varietals", selectedVarietalIDs) as FilterVCItems)
+        if (dataLoaded) {
+            performSegue(withIdentifier: "FilterVC", sender: (varietals, "Varietals", selectedVarietalIDs) as FilterVCItems)
+        }
     }
     
     @IBAction func filterFourBtnPressed(_ sender: Any) {
-        performSegue(withIdentifier: "FilterVC", sender: (tastes, "Tastes", selectedTasteIDs) as FilterVCItems)
-        
+        if (dataLoaded) {
+            performSegue(withIdentifier: "FilterVC", sender: (tastes, "Tastes", selectedTasteIDs) as FilterVCItems)
+        }
     }
     
     @IBAction func applyFilter(_ sender: Any) {
