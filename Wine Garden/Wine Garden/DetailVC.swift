@@ -35,7 +35,7 @@ class DetailVC: UIViewController, UITableViewDelegate, UITableViewDataSource
             }
             
         }
-        catalogUrl = "\(baseUrl)\(catalogExt)(\(categories))&size=10&apikey=\(apikey)"
+        catalogUrl = "\(baseUrl)\(catalogExt)(\(categories))&size=50&apikey=\(apikey)"
         print(catalogUrl)
         setup {
             self.updateUI()
