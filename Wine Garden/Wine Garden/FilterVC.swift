@@ -30,10 +30,6 @@ class FilterVC: UIViewController, UITableViewDelegate, UITableViewDataSource {
         tableView.dataSource = self
     }
     
-    @IBAction func selectBtnPressed(_ sender: Any) {
-        
-    }
-    
     @IBAction func clearBtnPressed(_ sender: Any) {
         selectedIDs.removeAll()
         tableView.reloadData()
