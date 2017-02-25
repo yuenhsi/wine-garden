@@ -12,5 +12,11 @@ class WebViewVC: UIViewController {
 
     @IBOutlet weak var webView: UIWebView!
     
-
+    var webpage: URL!
+    
+    override func viewDidLoad() {
+        webView.loadRequest(URLRequest(url: webpage))
+        
+    }
+    
 }

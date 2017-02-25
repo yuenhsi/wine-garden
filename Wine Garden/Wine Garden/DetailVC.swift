@@ -60,8 +60,15 @@ class DetailVC: UIViewController, UITableViewDelegate, UITableViewDataSource
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath)
     {
         let wine = wines[indexPath.row]
-        if let _ = wine.url {
-            
+        let url = URL(string: wine.url ?? "https://wine.com")!
+        performSegue(withIdentifier: "WebViewVC", sender: url)
+    }
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if let segueVC = segue.destination as? WebViewVC {
+            if let webpage = sender as? URL {
+                segueVC.webpage = webpage
+            }
         }
     }
     

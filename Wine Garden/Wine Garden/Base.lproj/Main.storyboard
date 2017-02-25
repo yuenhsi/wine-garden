@@ -142,16 +142,15 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <webView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="UKu-md-ERa">
-                                <rect key="frame" x="0.0" y="20" width="320" height="460"/>
-                                <color key="backgroundColor" red="0.36078431370000003" green="0.38823529410000002" blue="0.4039215686" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <rect key="frame" x="0.0" y="0.0" width="320" height="480"/>
                             </webView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
-                            <constraint firstItem="wRq-Is-ZAB" firstAttribute="top" secondItem="UKu-md-ERa" secondAttribute="bottom" id="0hd-Vf-hPg"/>
-                            <constraint firstItem="UKu-md-ERa" firstAttribute="top" secondItem="qzh-Ga-B2I" secondAttribute="bottom" id="ADE-r9-Hpb"/>
-                            <constraint firstAttribute="trailing" secondItem="UKu-md-ERa" secondAttribute="trailing" id="I7E-HQ-GFR"/>
-                            <constraint firstItem="UKu-md-ERa" firstAttribute="leading" secondItem="ag6-0C-U3h" secondAttribute="leading" id="jg8-PV-S52"/>
+                            <constraint firstItem="UKu-md-ERa" firstAttribute="leading" secondItem="ag6-0C-U3h" secondAttribute="leading" id="GKC-Hi-NcT"/>
+                            <constraint firstItem="UKu-md-ERa" firstAttribute="top" secondItem="ag6-0C-U3h" secondAttribute="top" id="X88-8B-oos"/>
+                            <constraint firstAttribute="trailing" secondItem="UKu-md-ERa" secondAttribute="trailing" id="YeV-Uo-exK"/>
+                            <constraint firstItem="wRq-Is-ZAB" firstAttribute="top" secondItem="UKu-md-ERa" secondAttribute="bottom" id="jMS-ZT-e8H"/>
                         </constraints>
                     </view>
                     <connections>
@@ -292,6 +291,7 @@
                     </view>
                     <connections>
                         <outlet property="tableView" destination="tx2-qe-BWq" id="5fk-Gl-WZW"/>
+                        <segue destination="Omh-R2-6D3" kind="show" identifier="WebViewVC" id="5bo-2y-9Zc"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
